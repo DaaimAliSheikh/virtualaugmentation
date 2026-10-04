@@ -1,0 +1,167 @@
+<!--
+  The four service cards, shared by Home (#services) and Services (#services).
+  Each title link stretches over its card, so the whole card is one target.
+  The marquees are decoration: two identical lists per row, each shifted by its own width.
+-->
+<ul role="list" class="grid grid-cols-1 gap-[1.7rem] sm:gap-8 md:grid-cols-2 md:gap-x-[1.7rem] md:gap-y-10 lg:gap-10">
+  <!-- Web Design: dashboard visual -->
+  <li data-reveal="up" style="--reveal-delay:400ms" class="services-cards-card relative flex h-[24.6rem] flex-col gap-[2.2rem] overflow-hidden rounded-card bg-surface/80 px-5 py-6 shadow-surface backdrop-blur-[10px] sm:h-106 sm:gap-[1.8rem] sm:px-6 sm:pb-9.5 md:h-100 md:gap-10 lg:h-117.25 lg:gap-12">
+    <div class="flex w-full flex-col items-start gap-3">
+      <h3 class="type-h6"><a href="/services#web-design" class="rounded-xs after:absolute after:inset-0 after:z-10">Website design services</a></h3>
+      <p class="type-small">Marketing sites, landing pages and product screens designed in Figma, with a component library your developers can build from.</p>
+    </div>
+    <div class="absolute right-0 bottom-7.5 z-1 w-66 overflow-hidden sm:w-122 md:w-78 lg:bottom-9.5 lg:h-69.25 lg:w-133.75">
+      <img
+        src="/src/assets/images/feature-dashboard-1070.webp"
+        srcset="/src/assets/images/feature-dashboard-480.webp 480w, /src/assets/images/feature-dashboard-800.webp 800w, /src/assets/images/feature-dashboard-1070.webp 1070w"
+        sizes="(min-width: 992px) 535px, (min-width: 768px) 312px, (min-width: 480px) 488px, 264px"
+        alt="Dark dashboard interface with bar charts and key metrics"
+        width="1070"
+        height="554"
+        loading="lazy"
+        decoding="async"
+        class="h-auto w-full"
+      >
+    </div>
+    <div aria-hidden="true" class="services-cards-light absolute inset-x-0 bottom-0 h-12 bg-gradient-brand blur-[100px] transition-opacity duration-1000 ease-standard sm:h-12.5 lg:-bottom-3.25"></div>
+  </li>
+
+  <!-- Web Development: two rows of integration icons -->
+  <li data-reveal="up" style="--reveal-delay:400ms" class="services-cards-card relative flex h-[24.6rem] flex-col gap-[2.2rem] overflow-hidden rounded-card bg-surface/80 px-5 py-6 shadow-surface backdrop-blur-[10px] sm:h-106 sm:gap-[1.8rem] sm:px-6 sm:pb-9.5 md:h-100 md:gap-10 lg:h-117.25 lg:gap-12">
+    <div class="flex w-full flex-col items-start gap-3">
+      <h3 class="type-h6"><a href="/services#web-development" class="rounded-xs after:absolute after:inset-0 after:z-10">Outsourced web development</a></h3>
+      <p class="type-small">Remote developers who join your sprints and ship in your stack, front end or back end, be it WordPress, Shopify or React.</p>
+    </div>
+    <div aria-hidden="true" class="services-cards-light absolute inset-x-0 bottom-0 h-12 bg-gradient-brand blur-[100px] transition-opacity duration-1000 ease-standard sm:h-12.5 lg:-bottom-3.25"></div>
+    <div aria-hidden="true" class="absolute inset-x-0 bottom-8.75 flex flex-col gap-5 lg:bottom-19">
+      <div class="relative flex items-center">
+        <div class="relative z-2 flex shrink-0 animate-marquee items-center gap-[1.23rem] pr-12.5 [--marquee-duration:30s] sm:gap-6 lg:gap-6.5">
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-9.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-8.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-10.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-6.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-3.svg" alt="" width="36" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-7.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-2.svg" alt="" width="49" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-4.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-1.svg" alt="" width="41" height="40" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="relative z-2 flex shrink-0 animate-marquee items-center gap-[1.23rem] pr-12.5 [--marquee-duration:30s] sm:gap-6 lg:gap-6.5">
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-9.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-8.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-10.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-6.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-3.svg" alt="" width="36" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-7.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-2.svg" alt="" width="49" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-4.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-1.svg" alt="" width="41" height="40" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="absolute inset-x-0 flex h-px items-center justify-end bg-line/80">
+          <div class="services-cards-line h-px w-16.5 bg-[linear-gradient(90deg,var(--color-primary),rgb(241_165_24/0))] [--services-cards-line-x:-572px]"></div>
+        </div>
+      </div>
+      <div class="relative flex items-center">
+        <div class="relative z-6 flex shrink-0 animate-marquee-reverse items-center gap-5 pr-5 [--marquee-duration:30s] sm:gap-6 sm:pr-6 lg:gap-6.5 lg:pr-6.5">
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-9.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-8.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-10.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-6.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-3.svg" alt="" width="36" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-7.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-2.svg" alt="" width="49" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-4.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-1.svg" alt="" width="41" height="40" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="relative z-6 flex shrink-0 animate-marquee-reverse items-center gap-5 pr-5 [--marquee-duration:30s] sm:gap-6 sm:pr-6 lg:gap-6.5 lg:pr-6.5">
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-9.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-8.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-10.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-6.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-3.svg" alt="" width="36" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-7.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-2.svg" alt="" width="49" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-4.svg" alt="" width="40" height="40" loading="lazy" decoding="async"></div>
+          <div class="relative flex size-16 shrink-0 items-center justify-center rounded-card bg-surface shadow-surface sm:size-18 lg:size-20"><img src="/src/assets/images/feature-icon-1.svg" alt="" width="41" height="40" loading="lazy" decoding="async"></div>
+        </div>
+        <div class="absolute inset-x-0 flex h-px items-center justify-start bg-line/80">
+          <div class="services-cards-line h-px w-16.5 bg-[linear-gradient(90deg,rgb(241_165_24/0),var(--color-primary))] [--services-cards-line-x:570px]"></div>
+        </div>
+      </div>
+    </div>
+  </li>
+
+  <!-- Customer Service: two rows of avatars and the "You" cursor -->
+  <li data-reveal="up" style="--reveal-delay:400ms" class="services-cards-card relative flex h-120 flex-col items-center gap-8 overflow-hidden rounded-card bg-surface/80 px-5 py-6 shadow-surface backdrop-blur-[10px] sm:h-104 sm:px-6 sm:pb-10 md:h-112 md:gap-10 md:pb-12.5 lg:h-117.25 lg:gap-12">
+    <div class="flex w-full flex-col items-start gap-3">
+      <h3 class="type-h6"><a href="/services#customer-service" class="rounded-xs after:absolute after:inset-0 after:z-10">Outsourced customer service in your tone of voice</a></h3>
+      <p class="type-small">Trained support specialists answer email, chat and help desk tickets in your tools, with coverage planned around the hours when your customers write in.</p>
+    </div>
+    <div aria-hidden="true" class="services-cards-light absolute inset-x-0 bottom-0 h-12 bg-gradient-brand blur-[100px] transition-opacity duration-1000 ease-standard sm:h-12.5 lg:-bottom-3.25"></div>
+    <div aria-hidden="true" class="absolute inset-x-0 bottom-8.75 flex flex-col gap-6 lg:bottom-19">
+      <div class="relative flex items-center">
+        <div class="relative z-2 flex shrink-0 animate-marquee items-center gap-[1.23rem] pr-12.5 [--marquee-duration:30s] sm:gap-6 lg:gap-6.5">
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-3.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-7.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-2.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-6.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-4.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+        </div>
+        <div class="relative z-2 flex shrink-0 animate-marquee items-center gap-[1.23rem] pr-12.5 [--marquee-duration:30s] sm:gap-6 lg:gap-6.5">
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-3.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-7.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-2.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-6.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-4.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+        </div>
+      </div>
+      <div class="relative flex items-center">
+        <div class="relative z-6 flex shrink-0 animate-marquee-reverse items-center gap-5 pr-5 [--marquee-duration:30s] sm:gap-6 sm:pr-6 lg:gap-6.5 lg:pr-6.5">
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-3.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-7.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-2.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-6.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-4.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+        </div>
+        <div class="relative z-6 flex shrink-0 animate-marquee-reverse items-center gap-5 pr-5 [--marquee-duration:30s] sm:gap-6 sm:pr-6 lg:gap-6.5 lg:pr-6.5">
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-3.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-7.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-2.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-6.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-placeholder.svg" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+          <div class="size-20 shrink-0 lg:size-23.5"><img src="/src/assets/images/avatar-4.webp" alt="" width="94" height="94" loading="lazy" decoding="async" class="size-full"></div>
+        </div>
+      </div>
+    </div>
+    <img src="/src/assets/images/cursor-you.svg" alt="" aria-hidden="true" width="95" height="80" loading="lazy" decoding="async" class="absolute inset-x-0 top-57.75 z-3 mx-auto hidden lg:block">
+  </li>
+
+  <!-- Graphic Design: analytics chart visual (the frame fills the leftover height below 992px, as in the reference) -->
+  <li data-reveal="up" style="--reveal-delay:400ms" class="services-cards-card relative flex h-[24.6rem] flex-col gap-[2.2rem] overflow-hidden rounded-card bg-surface/80 px-5 py-6 shadow-surface backdrop-blur-[10px] sm:h-106 sm:gap-[1.8rem] sm:px-6 sm:pb-9.5 md:h-100 md:gap-10 lg:h-117.25 lg:gap-12">
+    <div class="flex w-full flex-col items-start gap-3">
+      <h3 class="type-h6"><a href="/services#graphic-design" class="rounded-xs after:absolute after:inset-0 after:z-10">Graphic design services</a></h3>
+      <p class="type-small">Social graphics, ad creative, sales decks and brand assets, delivered on brand and on your schedule.</p>
+    </div>
+    <div class="z-1 h-full w-full rounded-card bg-body/10 p-2 lg:mx-auto lg:h-64 lg:w-129.5">
+      <img
+        src="/src/assets/images/feature-analytics-1004.webp"
+        srcset="/src/assets/images/feature-analytics-480.webp 480w, /src/assets/images/feature-analytics-800.webp 800w, /src/assets/images/feature-analytics-1004.webp 1004w"
+        sizes="(min-width: 992px) 502px, (min-width: 768px) calc(50vw - 108px), calc(100vw - 88px)"
+        alt="Area chart with a tooltip that reads 5 projects"
+        width="1004"
+        height="480"
+        loading="lazy"
+        decoding="async"
+        class="h-full w-full object-cover lg:h-auto"
+      >
+    </div>
+    <div aria-hidden="true" class="services-cards-light absolute inset-x-0 bottom-0 h-12 bg-gradient-brand blur-[100px] transition-opacity duration-1000 ease-standard sm:h-12.5 lg:-bottom-3.25"></div>
+  </li>
+</ul>

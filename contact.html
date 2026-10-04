@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include src/partials/head.html -->
+    <title>Contact us and get a quote | Virtual Augmentation</title>
+    <meta name="description" content="Contact Virtual Augmentation for a quote on remote developers, designers and support specialists. Send a message and we reply within one business day.">
+    <link rel="canonical" href="%VITE_SITE_URL%/contact">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="Contact Virtual Augmentation">
+    <meta property="og:description" content="Tell us which skills your team needs and when you want to start. We reply within one business day.">
+    <meta property="og:url" content="%VITE_SITE_URL%/contact">
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Virtual Augmentation. Your team, augmented. Web development, web design, customer service and graphic design specialists, on a monthly plan.">
+    <meta name="twitter:title" content="Contact Virtual Augmentation">
+    <meta name="twitter:description" content="Tell us which skills your team needs and when you want to start. We reply within one business day.">
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.jpg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "%VITE_SITE_URL%/#organization",
+            "name": "Virtual Augmentation",
+            "url": "%VITE_SITE_URL%/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "%VITE_SITE_URL%/icon-512.png",
+              "width": 512,
+              "height": 512
+            },
+            "email": "%VITE_CONTACT_EMAIL%",
+            "description": "Virtual Augmentation is a remote talent agency: vetted remote developers, designers and support specialists who work as part of your team, on a simple monthly plan.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "%VITE_CONTACT_EMAIL%",
+              "availableLanguage": "English"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "%VITE_SITE_URL%/#website",
+            "url": "%VITE_SITE_URL%/",
+            "name": "Virtual Augmentation",
+            "publisher": {
+              "@id": "%VITE_SITE_URL%/#organization"
+            },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "ContactPage",
+            "@id": "%VITE_SITE_URL%/contact#webpage",
+            "url": "%VITE_SITE_URL%/contact",
+            "name": "Contact us and get a quote | Virtual Augmentation",
+            "description": "Contact Virtual Augmentation for a quote on remote developers, designers and support specialists. Send a message and we reply within one business day.",
+            "isPartOf": {
+              "@id": "%VITE_SITE_URL%/#website"
+            },
+            "about": {
+              "@id": "%VITE_SITE_URL%/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "%VITE_SITE_URL%/og-image.jpg",
+              "width": 1200,
+              "height": 630
+            },
+            "inLanguage": "en",
+            "breadcrumb": {
+              "@id": "%VITE_SITE_URL%/contact#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "%VITE_SITE_URL%/contact#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "%VITE_SITE_URL%/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact",
+                "item": "%VITE_SITE_URL%/contact"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="relative isolate overflow-x-clip">
+      <!-- @include src/partials/header.html -->
+      <main id="main">
+        <!-- @include src/partials/sections/contact-main.html -->
+      </main>
+    </div>
+    <!-- @include src/partials/footer.html -->
+  </body>
+</html>

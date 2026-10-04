@@ -1,0 +1,192 @@
+<!--
+  Billing toggle + the three plan cards. Included by home-pricing.html and pricing-plans.html.
+  Each price holds a monthly and a yearly value; src/js/pricing.js flips them ([data-price]).
+  Without JS the monthly prices show.
+-->
+<div data-plans class="flex flex-col items-center">
+  <div data-reveal="left" style="--reveal-delay:300ms" class="mb-6 sm:mb-7.5">
+    <div role="group" aria-label="Billing period" class="flex items-center justify-center gap-1.5 rounded-pill bg-surface px-4 py-3.5 plans-toggle-shadow">
+      <button
+        type="button"
+        data-billing="month"
+        aria-pressed="true"
+        class="flex cursor-pointer rounded-pill px-5 py-3 text-regular/4 font-medium text-foreground aria-pressed:plans-toggle-pill"
+      >
+        Month
+      </button>
+      <button
+        type="button"
+        data-billing="year"
+        aria-pressed="false"
+        class="flex cursor-pointer gap-1 rounded-pill px-5 py-3 text-regular/4 font-medium text-foreground aria-pressed:plans-toggle-pill"
+      >
+        <span>Year</span> <span class="type-caption">25% off</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    data-plans-cards
+    class="grid w-full grid-cols-1 gap-[1.6rem] sm:gap-7.5 md:grid-cols-2 md:gap-x-[1.7rem] md:gap-y-[2.2rem] lg:flex lg:gap-6"
+  >
+    <article
+      aria-labelledby="plan-starter-title"
+      data-reveal="up"
+      style="--reveal-delay:500ms"
+      class="relative rounded-card bg-surface px-5 py-6 plans-card-shadow sm:px-6 sm:py-[1.7rem] md:py-8 lg:w-96 lg:p-8.5"
+    >
+      <div class="mb-7.5 flex flex-col gap-3">
+        <h3 id="plan-starter-title" class="type-h6">Starter</h3>
+        <p class="type-small">40 hours of specialist time a month, in one service you choose.</p>
+      </div>
+      <p class="type-h3 space-below-md">
+        <span data-price="month">$499</span><span data-price="year" hidden>$4,490</span><span class="text-regular font-normal"><span data-price="month">/month</span><span data-price="year" hidden>/year</span></span>
+      </p>
+      <a
+        class="btn space-below-md"
+        data-plan="Starter"
+        href="/contact?plan=starter"
+        aria-label="Get a quote for the Starter plan"
+      >
+        Get a Quote
+      </a>
+      <ul class="flex flex-col gap-3.5">
+        <li class="flex items-center gap-2.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Vetted remote specialists</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Weekly updates</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Onboarding call</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Work in your tools</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-off.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Not included: </span>Two services at once</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-off.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Not included: </span>100+ hours every month</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-off.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Not included: </span>All four services included</span>
+        </li>
+      </ul>
+    </article>
+    <article
+      aria-labelledby="plan-growth-title"
+      data-reveal="up"
+      style="--reveal-delay:500ms"
+      class="relative rounded-card bg-surface px-5 py-6 plans-card-shadow sm:px-6 sm:py-[1.7rem] md:py-8 lg:w-96 lg:p-8.5"
+    >
+      <div class="mb-7.5 flex flex-col gap-3">
+        <h3 id="plan-growth-title" class="type-h6">Growth</h3>
+        <p class="absolute top-6 right-5.5 rounded-card bg-gradient-amber px-4 py-2 text-small/3.5 font-medium text-background">
+          Most Popular
+        </p>
+        <p class="type-small">100 hours a month across up to two services, for steady workloads.</p>
+      </div>
+      <p class="type-h3 space-below-md">
+        <span data-price="month">$1,299</span><span data-price="year" hidden>$11,690</span><span class="text-regular font-normal"><span data-price="month">/month</span><span data-price="year" hidden>/year</span></span>
+      </p>
+      <a
+        class="btn space-below-md"
+        data-plan="Growth"
+        href="/contact?plan=growth"
+        aria-label="Get a quote for the Growth plan"
+      >
+        Get a Quote
+      </a>
+      <ul class="flex flex-col gap-3.5">
+        <li class="flex items-center gap-2.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Vetted remote specialists</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Weekly updates</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Onboarding call</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Work in your tools</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Two services at once</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>100+ hours every month</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-off.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Not included: </span>All four services included</span>
+        </li>
+      </ul>
+    </article>
+    <article
+      aria-labelledby="plan-scale-title"
+      data-reveal="up"
+      style="--reveal-delay:500ms"
+      class="relative rounded-card bg-surface px-5 py-6 plans-card-shadow sm:px-6 sm:py-[1.7rem] md:py-8 lg:w-96 lg:p-8.5"
+    >
+      <div class="mb-7.5 flex flex-col gap-3">
+        <h3 id="plan-scale-title" class="type-h6">Scale</h3>
+        <p class="type-small">200 hours a month across all four services, for teams that need a complete remote crew.</p>
+      </div>
+      <p class="type-h3 space-below-md">
+        <span data-price="month">$2,499</span><span data-price="year" hidden>$22,490</span><span class="text-regular font-normal"><span data-price="month">/month</span><span data-price="year" hidden>/year</span></span>
+      </p>
+      <a
+        class="btn space-below-md"
+        data-plan="Scale"
+        href="/contact?plan=scale"
+        aria-label="Get a quote for the Scale plan"
+      >
+        Get a Quote
+      </a>
+      <ul class="flex flex-col gap-3.5">
+        <li class="flex items-center gap-2.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Vetted remote specialists</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Weekly updates</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Onboarding call</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Work in your tools</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>Two services at once</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>100+ hours every month</span>
+        </li>
+        <li class="flex items-center gap-2.5 border-t border-line pt-3.5">
+          <img src="/src/assets/images/check-on.png" alt="" width="20" height="20" loading="lazy" decoding="async" class="size-5 shrink-0">
+          <span class="type-body"><span class="sr-only">Included: </span>All four services included</span>
+        </li>
+      </ul>
+    </article>
+  </div>
+</div>

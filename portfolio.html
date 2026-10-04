@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include src/partials/head.html -->
+    <title>Web design portfolio &amp; agency work | Virtual Augmentation</title>
+    <meta name="description" content="Browse our web design portfolio, plus web development, customer service and graphic design projects from our remote teams. Filter the work by service.">
+    <link rel="canonical" href="%VITE_SITE_URL%/portfolio">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="Web design portfolio and recent projects">
+    <meta property="og:description" content="Our web design portfolio, plus web development, customer service and graphic design work by our remote teams.">
+    <meta property="og:url" content="%VITE_SITE_URL%/portfolio">
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Virtual Augmentation. Your team, augmented. Web development, web design, customer service and graphic design specialists, on a monthly plan.">
+    <meta name="twitter:title" content="Web design portfolio and recent projects">
+    <meta name="twitter:description" content="Our web design portfolio, plus web development, customer service and graphic design work by our remote teams.">
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.jpg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "%VITE_SITE_URL%/#organization",
+            "name": "Virtual Augmentation",
+            "url": "%VITE_SITE_URL%/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "%VITE_SITE_URL%/icon-512.png",
+              "width": 512,
+              "height": 512
+            },
+            "email": "%VITE_CONTACT_EMAIL%",
+            "description": "Virtual Augmentation is a remote talent agency: vetted remote developers, designers and support specialists who work as part of your team, on a simple monthly plan.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "%VITE_CONTACT_EMAIL%",
+              "availableLanguage": "English"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "%VITE_SITE_URL%/#website",
+            "url": "%VITE_SITE_URL%/",
+            "name": "Virtual Augmentation",
+            "publisher": {
+              "@id": "%VITE_SITE_URL%/#organization"
+            },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "CollectionPage",
+            "@id": "%VITE_SITE_URL%/portfolio#webpage",
+            "url": "%VITE_SITE_URL%/portfolio",
+            "name": "Web design portfolio & agency work | Virtual Augmentation",
+            "description": "Browse our web design portfolio, plus web development, customer service and graphic design projects from our remote teams. Filter the work by service.",
+            "isPartOf": {
+              "@id": "%VITE_SITE_URL%/#website"
+            },
+            "about": {
+              "@id": "%VITE_SITE_URL%/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "%VITE_SITE_URL%/og-image.jpg",
+              "width": 1200,
+              "height": 630
+            },
+            "inLanguage": "en",
+            "breadcrumb": {
+              "@id": "%VITE_SITE_URL%/portfolio#breadcrumb"
+            },
+            "mainEntity": {
+              "@id": "%VITE_SITE_URL%/portfolio#project-list"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "%VITE_SITE_URL%/portfolio#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "%VITE_SITE_URL%/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Portfolio",
+                "item": "%VITE_SITE_URL%/portfolio"
+              }
+            ]
+          },
+          {
+            "@type": "ItemList",
+            "@id": "%VITE_SITE_URL%/portfolio#project-list",
+            "name": "Recent projects",
+            "url": "%VITE_SITE_URL%/portfolio#projects",
+            "numberOfItems": 6,
+            "itemListOrder": "https://schema.org/ItemListOrderAscending",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Store rebuild for a home decor brand",
+                  "description": "A faster Shopify store with a cleaner checkout, built by two remote developers.",
+                  "genre": "Web Development",
+                  "creator": {
+                    "@id": "%VITE_SITE_URL%/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Marketing site redesign for a SaaS team",
+                  "description": "New page structure, visual language and a Figma design system ready to build.",
+                  "genre": "Web Design",
+                  "creator": {
+                    "@id": "%VITE_SITE_URL%/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Support desk for a subscription service",
+                  "description": "Email and chat support in the client's own help desk, in their brand voice.",
+                  "genre": "Customer Service",
+                  "creator": {
+                    "@id": "%VITE_SITE_URL%/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Brand identity for a wellness company",
+                  "description": "A new logo suite, color palette and social templates for a growing brand.",
+                  "genre": "Graphic Design",
+                  "creator": {
+                    "@id": "%VITE_SITE_URL%/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Class booking web app for a yoga studio",
+                  "description": "A React front end and booking flow, shipped alongside the client's engineers.",
+                  "genre": "Web Development",
+                  "creator": {
+                    "@id": "%VITE_SITE_URL%/#organization"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@type": "CreativeWork",
+                  "name": "Landing page system for a fintech launch",
+                  "description": "Reusable page templates that let the marketing team launch campaigns fast.",
+                  "genre": "Web Design",
+                  "creator": {
+                    "@id": "%VITE_SITE_URL%/#organization"
+                  }
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="relative isolate overflow-x-clip">
+      <!-- @include src/partials/header.html -->
+      <main id="main">
+        <!-- @include src/partials/sections/portfolio-featured.html -->
+        <!-- @include src/partials/sections/cta.html -->
+        <!-- @include src/partials/sections/portfolio-projects.html -->
+      </main>
+    </div>
+    <!-- @include src/partials/footer.html -->
+  </body>
+</html>

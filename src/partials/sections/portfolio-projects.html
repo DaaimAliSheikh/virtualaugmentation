@@ -1,0 +1,147 @@
+<!-- Project grid with service filters (last section of /portfolio). Filtering: src/js/portfolio.js. Without JS the filter bar stays hidden and all six projects show. -->
+<section id="projects" aria-labelledby="projects-title" class="page-padding section-space section-space-end">
+  <div class="page-container" data-reveal-group data-portfolio>
+    <div data-reveal="down" class="mx-auto text-center space-below-lg lg:w-[32.375rem]">
+      <h2 id="projects-title" class="type-h2">Web design portfolio and recent work.</h2>
+    </div>
+
+    <div
+      role="group"
+      aria-label="Filter projects by service"
+      data-reveal="left"
+      style="--reveal-delay:300ms; --reveal-distance:90px"
+      class="hidden flex-col gap-[0.9rem] space-below-lg md:flex-row md:flex-wrap md:items-center md:justify-center md:gap-3 [.js_&]:flex"
+    >
+      <button type="button" data-filter="all" aria-pressed="true" class="w-full cursor-pointer rounded-pill bg-elevated px-5 py-3 text-center text-regular/4 font-medium text-white transition-colors duration-200 hover:bg-muted aria-pressed:bg-gradient-brand md:w-auto">All work</button>
+      <button type="button" data-filter="web-development" aria-pressed="false" class="w-full cursor-pointer rounded-pill bg-elevated px-5 py-3 text-center text-regular/4 font-medium text-white transition-colors duration-200 hover:bg-muted aria-pressed:bg-gradient-brand md:w-auto">Web Development</button>
+      <button type="button" data-filter="web-design" aria-pressed="false" class="w-full cursor-pointer rounded-pill bg-elevated px-5 py-3 text-center text-regular/4 font-medium text-white transition-colors duration-200 hover:bg-muted aria-pressed:bg-gradient-brand md:w-auto">Web Design</button>
+      <button type="button" data-filter="graphic-design" aria-pressed="false" class="w-full cursor-pointer rounded-pill bg-elevated px-5 py-3 text-center text-regular/4 font-medium text-white transition-colors duration-200 hover:bg-muted aria-pressed:bg-gradient-brand md:w-auto">Graphic Design</button>
+      <button type="button" data-filter="customer-service" aria-pressed="false" class="w-full cursor-pointer rounded-pill bg-elevated px-5 py-3 text-center text-regular/4 font-medium text-white transition-colors duration-200 hover:bg-muted aria-pressed:bg-gradient-brand md:w-auto">Customer Service</button>
+    </div>
+
+    <p data-filter-status role="status" aria-live="polite" class="sr-only"></p>
+
+    <div data-project-grid class="grid grid-cols-1 gap-[1.8rem] sm:gap-8 md:grid-cols-2 md:gap-x-[1.7rem] md:gap-y-10 lg:grid-cols-3 lg:gap-x-6 lg:gap-y-12.5">
+      <article data-project data-category="web-development" data-reveal="up" style="--reveal-delay:400ms" class="group flex min-w-0 flex-col gap-4">
+        <div class="aspect-[1536/1784] w-full overflow-hidden rounded-card">
+          <img
+            src="/src/assets/images/work-6-800.webp"
+            srcset="/src/assets/images/work-6-480.webp 480w, /src/assets/images/work-6-800.webp 800w, /src/assets/images/work-6-1200.webp 1200w, /src/assets/images/work-6-1536.webp 1536w"
+            sizes="(min-width: 1248px) 384px, (min-width: 992px) 31vw, (min-width: 768px) 46vw, 94vw"
+            width="800"
+            height="929"
+            alt="Green glass polyhedron with white lettering, cover art for the store rebuild project"
+            loading="lazy"
+            decoding="async"
+            class="size-full object-cover transition-transform duration-1000 ease-standard lg:group-hover:scale-110 lg:group-focus-visible:scale-110"
+          >
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Store rebuild for a home decor brand</h3>
+          <p class="sr-only">Service: Web Development</p>
+          <p class="type-body">A faster Shopify store with a cleaner checkout, built by two remote developers.</p>
+        </div>
+      </article>
+      <article data-project data-category="web-design" data-reveal="up" style="--reveal-delay:400ms" class="group flex min-w-0 flex-col gap-4">
+        <div class="aspect-[1536/1784] w-full overflow-hidden rounded-card">
+          <img
+            src="/src/assets/images/work-5-800.webp"
+            srcset="/src/assets/images/work-5-480.webp 480w, /src/assets/images/work-5-800.webp 800w, /src/assets/images/work-5-1200.webp 1200w, /src/assets/images/work-5-1536.webp 1536w"
+            sizes="(min-width: 1248px) 384px, (min-width: 992px) 31vw, (min-width: 768px) 46vw, 94vw"
+            width="800"
+            height="929"
+            alt="Dark ribbed wave sculpture, cover art for the marketing site redesign project"
+            loading="lazy"
+            decoding="async"
+            class="size-full object-cover transition-transform duration-1000 ease-standard lg:group-hover:scale-110 lg:group-focus-visible:scale-110"
+          >
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Marketing site redesign for a SaaS team</h3>
+          <p class="sr-only">Service: Web Design</p>
+          <p class="type-body">New page structure, visual language and a Figma design system ready to build.</p>
+        </div>
+      </article>
+      <article data-project data-category="customer-service" data-reveal="up" style="--reveal-delay:400ms" class="group flex min-w-0 flex-col gap-4">
+        <div class="aspect-[1536/1784] w-full overflow-hidden rounded-card">
+          <img
+            src="/src/assets/images/work-4-800.webp"
+            srcset="/src/assets/images/work-4-480.webp 480w, /src/assets/images/work-4-800.webp 800w, /src/assets/images/work-4-1200.webp 1200w, /src/assets/images/work-4-1536.webp 1536w"
+            sizes="(min-width: 1248px) 384px, (min-width: 992px) 31vw, (min-width: 768px) 46vw, 94vw"
+            width="800"
+            height="929"
+            alt="Teal angular shapes on black, cover art for the support desk project"
+            loading="lazy"
+            decoding="async"
+            class="size-full object-cover transition-transform duration-1000 ease-standard lg:group-hover:scale-110 lg:group-focus-visible:scale-110"
+          >
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Support desk for a subscription service</h3>
+          <p class="sr-only">Service: Customer Service</p>
+          <p class="type-body">Email and chat support in the client&rsquo;s own help desk, in their brand voice.</p>
+        </div>
+      </article>
+      <article data-project data-category="graphic-design" data-reveal="up" style="--reveal-delay:400ms" class="group flex min-w-0 flex-col gap-4">
+        <div class="aspect-[1536/1784] w-full overflow-hidden rounded-card">
+          <img
+            src="/src/assets/images/work-3-800.webp"
+            srcset="/src/assets/images/work-3-480.webp 480w, /src/assets/images/work-3-800.webp 800w, /src/assets/images/work-3-1200.webp 1200w, /src/assets/images/work-3-1536.webp 1536w"
+            sizes="(min-width: 1248px) 384px, (min-width: 992px) 31vw, (min-width: 768px) 46vw, 94vw"
+            width="800"
+            height="929"
+            alt="Glass pyramid lit in teal and orange, cover art for the brand identity project"
+            loading="lazy"
+            decoding="async"
+            class="size-full object-cover transition-transform duration-1000 ease-standard lg:group-hover:scale-110 lg:group-focus-visible:scale-110"
+          >
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Brand identity for a wellness company</h3>
+          <p class="sr-only">Service: Graphic Design</p>
+          <p class="type-body">A new logo suite, color palette and social templates for a growing brand.</p>
+        </div>
+      </article>
+      <article data-project data-category="web-development" data-reveal="up" style="--reveal-delay:400ms" class="group flex min-w-0 flex-col gap-4">
+        <div class="aspect-[1536/1784] w-full overflow-hidden rounded-card">
+          <img
+            src="/src/assets/images/work-2-800.webp"
+            srcset="/src/assets/images/work-2-480.webp 480w, /src/assets/images/work-2-800.webp 800w, /src/assets/images/work-2-1200.webp 1200w, /src/assets/images/work-2-1536.webp 1536w"
+            sizes="(min-width: 1248px) 384px, (min-width: 992px) 31vw, (min-width: 768px) 46vw, 94vw"
+            width="800"
+            height="929"
+            alt="Glossy dark blue arcs, cover art for the class booking web app project"
+            loading="lazy"
+            decoding="async"
+            class="size-full object-cover transition-transform duration-1000 ease-standard lg:group-hover:scale-110 lg:group-focus-visible:scale-110"
+          >
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Class booking web app for a yoga studio</h3>
+          <p class="sr-only">Service: Web Development</p>
+          <p class="type-body">A React front end and booking flow, shipped alongside the client&rsquo;s engineers.</p>
+        </div>
+      </article>
+      <article data-project data-category="web-design" data-reveal="up" style="--reveal-delay:400ms" class="group flex min-w-0 flex-col gap-4">
+        <div class="aspect-[1536/1784] w-full overflow-hidden rounded-card">
+          <img
+            src="/src/assets/images/work-1-800.webp"
+            srcset="/src/assets/images/work-1-480.webp 480w, /src/assets/images/work-1-800.webp 800w, /src/assets/images/work-1-1200.webp 1200w, /src/assets/images/work-1-1536.webp 1536w"
+            sizes="(min-width: 1248px) 384px, (min-width: 992px) 31vw, (min-width: 768px) 46vw, 94vw"
+            width="800"
+            height="929"
+            alt="Dark teal folded shapes, cover art for the landing page system project"
+            loading="lazy"
+            decoding="async"
+            class="size-full object-cover transition-transform duration-1000 ease-standard lg:group-hover:scale-110 lg:group-focus-visible:scale-110"
+          >
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Landing page system for a fintech launch</h3>
+          <p class="sr-only">Service: Web Design</p>
+          <p class="type-body">Reusable page templates that let the marketing team launch campaigns fast.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

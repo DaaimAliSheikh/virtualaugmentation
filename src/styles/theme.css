@@ -1,0 +1,79 @@
+/*
+ * Design tokens.
+ *
+ * Every token below becomes a Tailwind utility (bg-surface, text-body, shadow-surface,
+ * rounded-card, text-small, ...). Reach for these before arbitrary values.
+ * Colors are authored in OKLCH; the hex in each comment is the exact sRGB value it resolves to.
+ */
+@theme {
+  /* ---- Color: the site is dark-only, so one semantic set is the whole palette ---- */
+  --color-*: initial;
+
+  --color-background: oklch(14.4% 0.015 284.3); /* #090910  page canvas, wells */
+  --color-surface: oklch(18.5% 0.012 285.2); /* #121218  cards, nav pill, inputs */
+  --color-elevated: oklch(27.7% 0.018 285.1); /* #272731  active pill, tags, hover surface */
+  --color-line: oklch(27.7% 0.018 285.1); /* #272731  hairlines and borders */
+  --color-muted: oklch(39.4% 0.017 285.6); /* #45454f  placeholders, disabled marks */
+  --color-subtle: oklch(57.8% 0.024 285.6); /* #787888  captions, column labels (reference #767686, lifted two steps to reach 4.5:1) */
+  --color-body: oklch(67.6% 0.011 267.3); /* #94979e  paragraph text */
+  --color-foreground: oklch(100% 0 0); /* #ffffff  headings, primary text */
+
+  --color-primary: oklch(65.06% 0.2042 40.01); /* #f05400  brand orange (gradient start) */
+  --color-accent: oklch(92.93% 0.1918 103.42); /* #ffec1c  brand yellow (gradient end) */
+  --color-amber: oklch(76.7% 0.158 82.7); /* #e4a800  secondary gradient start */
+
+  --color-success: oklch(67.54% 0.1938 134.62); /* #5eaf08  form success */
+  --color-danger: oklch(62.8% 0.258 29.2); /* #ff0000  form error */
+
+  --color-white: oklch(100% 0 0);
+  --color-black: oklch(0% 0 0);
+
+  /* ---- Typography ---- */
+  --font-sans: "Be Vietnam Pro", "Be Vietnam Pro Fallback", ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+    sans-serif;
+
+  /* Body sizes. Headings are responsive and live in components.css (type-h1 … type-h6). */
+  --text-caption: 0.75rem;
+  --text-caption--line-height: 1.25rem;
+  --text-small: 0.875rem;
+  --text-small--line-height: 1.375rem;
+  --text-regular: 1rem;
+  --text-regular--line-height: 1.5rem;
+  --text-large: 1.125rem;
+  --text-large--line-height: 1.625rem;
+
+  /* ---- Breakpoints: mobile-first, aligned with the layout's three collapse points ---- */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 30rem; /* 480px  mobile landscape and up */
+  --breakpoint-md: 48rem; /* 768px  tablet and up */
+  --breakpoint-lg: 62rem; /* 992px  desktop and up */
+  --breakpoint-xl: 80rem; /* 1280px */
+  --breakpoint-2xl: 90rem; /* 1440px */
+
+  /* ---- Shape ---- */
+  --radius-card: 0.625rem; /* 10px  cards and panels */
+  --radius-pill: 3.75rem; /* 60px  buttons, nav, inputs */
+
+  /* ---- Elevation: every raised surface uses the same lit-from-above trio ---- */
+  --shadow-surface: inset 0 -0.75px 1px 0 rgb(0 0 0 / 0.25), inset 0 0.75px 1px 0 rgb(255 255 255 / 0.16),
+    0 1px 1px 0 rgb(0 0 0 / 0.6);
+  --shadow-button: inset 0 0.75px 0.75px 0 #ffba76, 0 0.75px 0.75px 0 rgb(0 0 0 / 0.3),
+    inset 0 -0.75px 2px 0 rgb(0 0 0 / 0.6), 0 0 0 1.25px #684000;
+  --shadow-glow: -1px 1px 10px 0 var(--color-primary);
+
+  /* ---- Motion ---- */
+  --ease-standard: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-in-out-quint: cubic-bezier(0.86, 0, 0.07, 1);
+
+  --animate-marquee: marquee var(--marquee-duration, 30s) linear infinite;
+  --animate-marquee-reverse: marquee var(--marquee-duration, 30s) linear infinite reverse;
+
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+}

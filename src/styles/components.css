@@ -1,0 +1,459 @@
+/*
+ * Shared primitives.
+ *
+ * Single-purpose helpers are registered with @utility, so they sort with Tailwind's own
+ * utilities and accept variants (md:type-h3). Multi-part components (button, reveal) sit
+ * in the components layer, where any utility class can still override them.
+ */
+
+/* ------------------------------------------------------------------ */
+/* Typography                                                          */
+/* ------------------------------------------------------------------ */
+
+/* White type with a faint top-to-bottom falloff: the heading "ink" of the whole site. */
+@utility text-gradient-white {
+  background-image: linear-gradient(180deg, #fff, rgb(255 255 255 / 0.9));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-foreground);
+}
+
+/* Orange-to-yellow brand ink for short inline accents (links, highlights). */
+@utility text-gradient-brand {
+  background-image: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: var(--color-accent);
+}
+
+/*
+ * Heading scale. Visual style is decoupled from the tag, so the document outline can stay
+ * correct for SEO: <h1 class="type-h2"> is one page title that looks like a section title.
+ */
+@utility type-h1 {
+  @apply text-gradient-white;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-weight: 600;
+
+  @variant sm {
+    font-size: 3rem;
+    line-height: 3.5rem;
+  }
+  @variant md {
+    font-size: 3.5rem;
+    line-height: 4rem;
+  }
+  @variant lg {
+    font-size: 3.875rem;
+    line-height: 4.375rem;
+  }
+}
+
+@utility type-h2 {
+  @apply text-gradient-white;
+  font-size: 2.2rem;
+  line-height: 2.7rem;
+  font-weight: 600;
+
+  @variant lg {
+    font-size: 2.5rem;
+    line-height: 3rem;
+  }
+}
+
+@utility type-h3 {
+  @apply text-gradient-white;
+  font-size: 1.3rem;
+  line-height: 1.7rem;
+  font-weight: 600;
+
+  @variant sm {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+  @variant md {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+  @variant lg {
+    font-size: 2.125rem;
+    line-height: 2.625rem;
+  }
+}
+
+@utility type-h4 {
+  @apply text-gradient-white;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+
+  @variant md {
+    font-size: 1.9rem;
+    line-height: 2rem;
+  }
+  @variant lg {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+}
+
+@utility type-h5 {
+  @apply text-gradient-white;
+  font-size: 1.3rem;
+  line-height: 1.8rem;
+  font-weight: 600;
+
+  @variant md {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+}
+
+@utility type-h6 {
+  @apply text-gradient-white;
+  font-size: 1.2rem;
+  line-height: 1.7rem;
+  font-weight: 600;
+
+  @variant md {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+  @variant lg {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+/* Body copy: 16/24, the default paragraph. */
+@utility type-body {
+  color: var(--color-body);
+  font-size: var(--text-regular);
+  line-height: var(--text-regular--line-height);
+  font-weight: 400;
+}
+
+/* Secondary copy: 14/22. */
+@utility type-small {
+  color: var(--color-body);
+  font-size: var(--text-small);
+  line-height: var(--text-small--line-height);
+  font-weight: 400;
+}
+
+/* Fine print: 12/20, in heading ink. */
+@utility type-caption {
+  @apply text-gradient-white;
+  font-size: var(--text-caption);
+  line-height: var(--text-caption--line-height);
+  font-weight: 400;
+}
+
+/* ------------------------------------------------------------------ */
+/* Layout                                                              */
+/* ------------------------------------------------------------------ */
+
+/* Horizontal page gutters. Pair with page-container on the child. */
+@utility page-padding {
+  position: relative;
+  width: 100%;
+  padding-inline: 1rem;
+
+  @variant sm {
+    padding-inline: 1.5rem;
+  }
+  @variant md {
+    padding-inline: 1.875rem;
+  }
+  @variant lg {
+    padding-inline: 1.5rem;
+  }
+}
+
+/* The 1200px content column. */
+@utility page-container {
+  width: 100%;
+  max-width: 75rem;
+  margin-inline: auto;
+}
+
+/* Standard vertical rhythm of a section. */
+@utility section-space {
+  padding-block: 1.875rem;
+
+  @variant md {
+    padding-block: 2.5rem;
+  }
+  @variant lg {
+    padding-block: 3.75rem;
+  }
+}
+
+/* Last section before the footer: a deeper bottom. Combine with section-space. */
+@utility section-space-end {
+  padding-bottom: 3.75rem;
+
+  @variant md {
+    padding-bottom: 5rem;
+  }
+  @variant lg {
+    padding-bottom: 7.5rem;
+  }
+}
+
+/* Gap between a section heading block and the content under it. */
+@utility space-below-lg {
+  margin-bottom: 1.875rem;
+
+  @variant sm {
+    margin-bottom: 2.5rem;
+  }
+  @variant lg {
+    margin-bottom: 3.125rem;
+  }
+}
+
+@utility space-below-md {
+  margin-bottom: 1.875rem;
+
+  @variant sm {
+    margin-bottom: 2rem;
+  }
+  @variant lg {
+    margin-bottom: 2.5rem;
+  }
+}
+
+@utility space-below-sm {
+  margin-bottom: 1.875rem;
+}
+
+/* Brand gradient fills. */
+@utility bg-gradient-brand {
+  background-image: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+}
+
+@utility bg-gradient-amber {
+  background-image: linear-gradient(180deg, var(--color-amber), var(--color-accent));
+}
+
+@layer components {
+  /* ---------------------------------------------------------------- */
+  /* Button                                                            */
+  /*   .btn                 primary: molten pill, two corner bubbles   */
+  /*                        that flood the pill on hover               */
+  /*   .btn.btn-secondary   dark surface pill, orange glow on hover    */
+  /*   .btn.btn-plain       primary without the bubbles (form submits) */
+  /* The pill is display:flex: it fills a block parent and shrink-wraps */
+  /* inside a flex row. Add w-fit when it must hug its label.          */
+  /* ---------------------------------------------------------------- */
+  .btn {
+    position: relative;
+    isolation: isolate;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 0.75rem 1.375rem;
+    border: 1px solid;
+    border-color: rgb(255 205 39 / 0.8) #ffcd27 rgb(255 205 39 / 0.8) rgb(255 205 39 / 0.5);
+    border-radius: var(--radius-pill);
+    background-color: transparent;
+    background-image: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+    box-shadow: var(--shadow-button);
+    color: var(--color-white);
+    font-family: var(--font-sans);
+    font-size: 0.875rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.5s linear;
+  }
+
+  .btn::before,
+  .btn::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    bottom: -15.5px;
+    width: 55px;
+    height: 55px;
+    border-radius: 100%;
+    transition:
+      width 0.5s linear,
+      height 0.5s linear;
+  }
+
+  .btn::before {
+    left: -14px;
+    background-image: linear-gradient(230deg, rgb(228 168 0 / 0), #ffec1c);
+  }
+
+  .btn::after {
+    right: -17px;
+    background-image: linear-gradient(122deg, rgb(228 168 0 / 0), #ffec1c);
+  }
+
+  .btn:focus-visible {
+    color: var(--color-background);
+  }
+
+  .btn:focus-visible::before,
+  .btn:focus-visible::after {
+    width: 100%;
+    height: 200%;
+  }
+
+  @media (hover: hover) {
+    .btn:hover {
+      color: var(--color-background);
+    }
+
+    .btn:hover::before,
+    .btn:hover::after {
+      width: 100%;
+      height: 200%;
+    }
+  }
+
+  .btn.btn-secondary {
+    padding: 0.875rem 1.375rem;
+    border-style: none;
+    background-color: var(--color-surface);
+    background-image: none;
+    box-shadow: var(--shadow-surface);
+    color: var(--color-white);
+    font-size: 1rem;
+    transition:
+      border 0.3s,
+      transform 0.6s;
+  }
+
+  .btn.btn-secondary:focus-visible {
+    background-color: var(--color-elevated);
+    box-shadow: var(--shadow-glow);
+    color: var(--color-white);
+  }
+
+  @media (hover: hover) {
+    .btn.btn-secondary:hover {
+      background-color: var(--color-elevated);
+      box-shadow: var(--shadow-glow);
+      color: var(--color-white);
+    }
+  }
+
+  .btn:disabled {
+    cursor: default;
+  }
+
+  .btn.btn-plain {
+    transition: none;
+  }
+
+  .btn.btn-plain:hover,
+  .btn.btn-plain:focus-visible {
+    color: var(--color-white);
+  }
+
+  .btn.btn-secondary::before,
+  .btn.btn-secondary::after,
+  .btn.btn-plain::before,
+  .btn.btn-plain::after {
+    content: none;
+  }
+
+  @media (width >= 30rem) {
+    .btn {
+      padding-block: 0.875rem;
+    }
+  }
+
+  @media (width >= 62rem) {
+    .btn {
+      font-size: 1rem;
+    }
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Scroll reveal                                                     */
+  /*                                                                   */
+  /*   <div data-reveal-group>            trigger: enters the viewport */
+  /*     <div data-reveal="down">…</div>  settles from 80px above      */
+  /*     <div data-reveal="up" style="--reveal-delay: 400ms">…</div>   */
+  /*   </div>                                                          */
+  /*                                                                   */
+  /* Directions: up | down | left | right | zoom | fade.               */
+  /* Tunables (custom properties, inline or via [--reveal-…:…]):       */
+  /*   --reveal-duration (1400ms)  --reveal-delay (200ms)              */
+  /*   --reveal-ease (ease)  --reveal-distance (80px)  --reveal-scale  */
+  /* The hidden state only exists once JS has tagged <html class="js">, */
+  /* so the content is always visible to crawlers and without JS.      */
+  /* Put data-reveal on a wrapper, not on an element that has its own  */
+  /* transform or transition.                                          */
+  /* ---------------------------------------------------------------- */
+  [data-reveal] {
+    transition-property: opacity, transform;
+    transition-duration: var(--reveal-duration, 1400ms);
+    transition-timing-function: var(--reveal-ease, ease);
+    transition-delay: var(--reveal-delay, 200ms);
+  }
+
+  .js [data-reveal]:not(.is-revealed) {
+    opacity: 0;
+  }
+
+  .js [data-reveal="up"]:not(.is-revealed) {
+    transform: translate3d(0, var(--reveal-distance, 80px), 0) scale(var(--reveal-scale, 0.95));
+  }
+
+  .js [data-reveal="down"]:not(.is-revealed) {
+    transform: translate3d(0, calc(var(--reveal-distance, 80px) * -1), 0) scale(var(--reveal-scale, 0.95));
+  }
+
+  .js [data-reveal="left"]:not(.is-revealed) {
+    transform: translate3d(var(--reveal-distance, 80px), 0, 0) scale(var(--reveal-scale, 0.95));
+  }
+
+  .js [data-reveal="right"]:not(.is-revealed) {
+    transform: translate3d(calc(var(--reveal-distance, 80px) * -1), 0, 0) scale(var(--reveal-scale, 0.95));
+  }
+
+  .js [data-reveal="zoom"]:not(.is-revealed) {
+    transform: scale(var(--reveal-scale, 0.95));
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .js [data-reveal]:not(.is-revealed) {
+      opacity: 1;
+      transform: none;
+    }
+  }
+
+  /* Skip link: first focusable element on every page. */
+  .skip-link {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-card);
+    background-color: var(--color-surface);
+    box-shadow: var(--shadow-surface);
+    color: var(--color-foreground);
+    font-size: var(--text-small);
+    font-weight: 500;
+    line-height: 1rem;
+    transform: translateY(-200%);
+  }
+
+  .skip-link:focus-visible {
+    transform: none;
+  }
+}

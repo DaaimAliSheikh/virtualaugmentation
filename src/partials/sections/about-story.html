@@ -1,0 +1,37 @@
+<!-- About: our story. Clones reference about / section-story. -->
+<section id="story" aria-labelledby="story-title" class="page-padding section-space">
+  <div class="page-container">
+    <!-- Below 992px the text sits above the photo, as in the reference (column-reverse). -->
+    <div
+      data-reveal-group
+      class="flex flex-col-reverse gap-8 sm:gap-9 md:gap-10 lg:flex-row lg:items-start lg:justify-center lg:gap-12.5"
+    >
+      <div data-reveal="right" class="aspect-[1224/844] overflow-hidden rounded-card lg:w-153 lg:flex-none">
+        <img
+          src="/src/assets/images/about-story-1224.webp"
+          srcset="/src/assets/images/about-story-480.webp 480w, /src/assets/images/about-story-800.webp 800w, /src/assets/images/about-story-1224.webp 1224w"
+          sizes="(min-width: 62rem) 612px, 94vw"
+          alt="Four colleagues in a meeting around a table with open laptops and notebooks"
+          width="1224"
+          height="844"
+          loading="lazy"
+          decoding="async"
+          class="size-full object-cover"
+        >
+      </div>
+      <div data-reveal="left" style="--reveal-delay:400ms" class="flex w-full min-w-0 flex-col items-start gap-6 md:gap-7.5">
+        <div class="flex flex-col items-start gap-4 md:gap-5">
+          <p class="rounded-card border-l border-accent bg-surface px-4 py-1">
+            <span class="block bg-gradient-amber bg-clip-text text-caption text-transparent">Our Story</span>
+          </p>
+          <h2 id="story-title" class="type-h2">Why we built Virtual Augmentation.</h2>
+          <div class="flex flex-col gap-3">
+            <p class="type-body">Growing teams rarely lack ideas. They lack hands: a developer, a designer or a support specialist, this month.</p>
+            <p class="type-body">So we built a remote staffing agency to close that gap, with vetted specialists, one monthly fee and people who join your team.</p>
+          </div>
+        </div>
+        <a class="btn" href="/portfolio">View Our Work</a>
+      </div>
+    </div>
+  </div>
+</section>

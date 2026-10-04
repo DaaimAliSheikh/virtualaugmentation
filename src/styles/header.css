@@ -1,0 +1,140 @@
+/*
+ * Site header (markup: src/partials/header.html, behaviour: src/js/nav.js).
+ *
+ * The look of the bar is written as utilities in the partial. This file holds the two
+ * things utilities cannot express: the --header-height contract that other sections
+ * build on, and the collapse mechanics of the menu below 992px.
+ */
+
+/* ------------------------------------------------------------------ */
+/* --header-height                                                     */
+/*                                                                     */
+/* The rendered height of the header, for a first section that slides  */
+/* its background underneath the transparent bar:                      */
+/*   <div class="absolute inset-x-0 bottom-0 -top-(--header-height)">  */
+/* It is the bar's row (--header-row, which the logo link takes as its */
+/* height) plus the vertical padding of the <header>, so the value is  */
+/* exact before first paint. nav.js then keeps it equal to the         */
+/* measured height (ResizeObserver).                                   */
+/* ------------------------------------------------------------------ */
+@layer base {
+  :root {
+    --header-row: 2rem; /* 32px */
+    --header-height: 4rem; /* 64px: row + 2 x 16px */
+  }
+
+  @media (width >= 30rem) {
+    :root {
+      --header-row: 2.375rem; /* 38px */
+      --header-height: 4.875rem; /* 78px: row + 2 x 20px */
+    }
+  }
+
+  @media (width >= 48rem) {
+    :root {
+      --header-row: 2.625rem; /* 42px */
+      --header-height: 5.125rem; /* 82px: row + 2 x 20px */
+    }
+  }
+
+  @media (width >= 62rem) {
+    :root {
+      --header-row: 3.25rem; /* 52px, the nav pill */
+      --header-height: 5.75rem; /* 92px: row + 2 x 20px */
+    }
+  }
+}
+
+@layer components {
+  .site-header {
+    /* The nav pill and the current link are lit by their own variants of --shadow-surface. */
+    --nav-pill-shadow: inset -0.75px 1px 5px 0 rgb(0 0 0 / 0.25), inset 0 0.75px 1px 0 rgb(255 255 255 / 0.16),
+      0 1px 1px 0 rgb(0 0 0 / 0.6);
+    --nav-current-shadow: 0 -0.75px 1px 0 rgb(0 0 0 / 0.25), inset 0 0.75px 1px 0 rgb(255 255 255 / 0.16),
+      0 1px 1px 0 rgb(0 0 0 / 0.6);
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Menu below 992px                                                  */
+  /*                                                                   */
+  /*   .site-header-toggle   the menu button                           */
+  /*   .site-header-panel    clip region that hangs under the bar      */
+  /*   .site-header-menu     the <nav> that slides inside it           */
+  /*                                                                   */
+  /* Without JavaScript the button cannot work, so it stays hidden and */
+  /* the menu is simply part of the page: stacked under the bar, every */
+  /* link reachable. Collapsing is an enhancement that only applies    */
+  /* once the inline script in <head> has tagged <html class="js">     */
+  /* (which happens before first paint, so nothing flashes).           */
+  /*                                                                   */
+  /* With JavaScript the single source of truth is aria-expanded on    */
+  /* the button. The panel overlays the page instead of pushing it,    */
+  /* and the menu slides down from behind the bar's bottom edge: it    */
+  /* starts its own height plus the bar's row further up and takes     */
+  /* 400ms with the "ease" curve to settle. While closed it is         */
+  /* visibility:hidden, which also takes its links out of the tab      */
+  /* order and the accessibility tree.                                 */
+  /* ---------------------------------------------------------------- */
+  .site-header-toggle {
+    display: none;
+  }
+
+  @media (width < 62rem) {
+    .js .site-header-toggle {
+      display: flex;
+    }
+
+    .js .site-header-panel {
+      position: absolute;
+      inset-inline: 0;
+      top: 100%;
+      overflow: clip;
+      padding-bottom: 2px; /* room for the menu's 1px drop shadow */
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .js .site-header-menu {
+      translate: 0 calc(-100% - var(--header-row));
+      pointer-events: auto;
+    }
+
+    /* Open: the panel also spans the rest of the first screen, so a click next to the menu
+       lands on it and only closes the menu (nav.js) instead of activating what is underneath. */
+    .js .site-header-toggle[aria-expanded="true"] ~ .site-header-panel {
+      min-height: calc(100svh - var(--header-height));
+      visibility: visible;
+      pointer-events: auto;
+    }
+
+    .js .site-header-toggle[aria-expanded="true"] ~ .site-header-panel .site-header-menu {
+      translate: 0 0;
+    }
+
+    /* The slide only runs for changes the visitor makes (nav.js sets data-animate), never
+       when a resize moves the layout across the breakpoint. Closing keeps the panel
+       rendered until the menu has left. */
+    .js .site-header[data-animate] .site-header-panel {
+      transition: visibility 0s linear 400ms;
+    }
+
+    .js .site-header[data-animate] .site-header-toggle[aria-expanded="true"] ~ .site-header-panel {
+      transition-delay: 0s;
+    }
+
+    .js .site-header[data-animate] .site-header-menu {
+      transition: translate 400ms var(--ease-standard);
+    }
+
+    /* The stacked no-JavaScript header is taller than --header-height. It gets the canvas as
+       a backdrop, so a section background slid under the bar cannot peek out around the
+       menu, and the menu sits inside the page gutters as a card. */
+    html:not(.js) .site-header {
+      background-color: var(--color-background);
+    }
+
+    html:not(.js) .site-header-menu {
+      border-radius: var(--radius-card);
+    }
+  }
+}

@@ -1,0 +1,27 @@
+<!-- Site header. Below 992px the nav collapses behind the menu button (src/styles/header.css, src/js/nav.js); without JavaScript it stays visible, stacked under the bar. -->
+<header data-header class="site-header relative z-1000 p-4 sm:p-5 md:px-6">
+  <div class="page-container flex flex-wrap items-center justify-between gap-y-4 sm:gap-y-5">
+    <a href="/" class="flex h-(--header-row) shrink-0 items-center pl-0.5 sm:pl-2.5 md:pl-0">
+      <img src="/src/assets/images/logo.svg" alt="Virtual Augmentation, home" width="184" height="44" class="w-32 sm:w-36 md:w-44 lg:w-46">
+    </a>
+
+    <button type="button" data-menu-toggle aria-expanded="false" aria-controls="site-nav" aria-label="Menu" class="site-header-toggle group -my-1.5 -mr-2.5 size-11 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-card select-none">
+      <span class="h-0.5 w-6 bg-gradient-amber transition-[translate,rotate] duration-[400ms,600ms] ease-in-out-quint group-aria-expanded:translate-y-2 group-aria-expanded:-rotate-45"></span>
+      <span class="h-0.5 w-6 bg-gradient-amber transition-[scale] duration-200 ease-in-out-quint group-aria-expanded:scale-x-0"></span>
+      <span class="h-0.5 w-6 bg-gradient-amber transition-[translate,rotate] duration-[400ms,600ms] ease-in-out-quint group-aria-expanded:-translate-y-2 group-aria-expanded:rotate-45"></span>
+    </button>
+
+    <div class="site-header-panel max-lg:basis-full lg:flex-1">
+      <nav id="site-nav" data-menu aria-label="Main" class="site-header-menu bg-surface p-4 shadow-(--nav-pill-shadow) sm:p-5 md:p-6 lg:flex lg:items-center lg:bg-transparent lg:p-0 lg:shadow-none">
+        <ul class="flex flex-col gap-2 lg:mx-auto lg:shrink-0 lg:flex-row lg:rounded-pill lg:bg-surface lg:p-2 lg:shadow-(--nav-pill-shadow)">
+          <li><a data-nav href="/" class="relative block rounded-pill px-2 py-2.5 text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-1 aria-[current=page]:bg-elevated aria-[current=page]:text-foreground aria-[current=page]:shadow-(--nav-current-shadow) lg:px-4">Home</a></li>
+          <li><a data-nav href="/about" class="relative block rounded-pill px-2 py-2.5 text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-1 aria-[current=page]:bg-elevated aria-[current=page]:text-foreground aria-[current=page]:shadow-(--nav-current-shadow) lg:px-4">About</a></li>
+          <li><a data-nav href="/services" class="relative block rounded-pill px-2 py-2.5 text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-1 aria-[current=page]:bg-elevated aria-[current=page]:text-foreground aria-[current=page]:shadow-(--nav-current-shadow) lg:px-4">Services</a></li>
+          <li><a data-nav href="/portfolio" class="relative block rounded-pill px-2 py-2.5 text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-1 aria-[current=page]:bg-elevated aria-[current=page]:text-foreground aria-[current=page]:shadow-(--nav-current-shadow) lg:px-4">Portfolio</a></li>
+          <li><a data-nav href="/pricing" class="relative block rounded-pill px-2 py-2.5 text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-1 aria-[current=page]:bg-elevated aria-[current=page]:text-foreground aria-[current=page]:shadow-(--nav-current-shadow) lg:px-4">Pricing</a></li>
+        </ul>
+        <a class="btn mt-2.5 ml-[0.55rem] w-fit lg:m-0 lg:shrink-0" href="/contact">Get a Quote</a>
+      </nav>
+    </div>
+  </div>
+</header>

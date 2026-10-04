@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- @include src/partials/head.html -->
+    <title>About our staff augmentation agency | Virtual Augmentation</title>
+    <meta name="description" content="Meet Virtual Augmentation, the staff augmentation agency that adds vetted remote developers, designers and support specialists to your team. See how we work.">
+    <link rel="canonical" href="%VITE_SITE_URL%/about">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta property="og:title" content="The staff augmentation agency for growing teams">
+    <meta property="og:description" content="Virtual Augmentation is a remote talent agency that adds vetted developers, designers and support specialists to busy teams.">
+    <meta property="og:url" content="%VITE_SITE_URL%/about">
+    <meta property="og:image" content="%VITE_SITE_URL%/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Virtual Augmentation. Your team, augmented. Web development, web design, customer service and graphic design specialists, on a monthly plan.">
+    <meta name="twitter:title" content="The staff augmentation agency for growing teams">
+    <meta name="twitter:description" content="Virtual Augmentation is a remote talent agency that adds vetted developers, designers and support specialists to busy teams.">
+    <meta name="twitter:image" content="%VITE_SITE_URL%/og-image.jpg">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "%VITE_SITE_URL%/#organization",
+            "name": "Virtual Augmentation",
+            "url": "%VITE_SITE_URL%/",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "%VITE_SITE_URL%/icon-512.png",
+              "width": 512,
+              "height": 512
+            },
+            "email": "%VITE_CONTACT_EMAIL%",
+            "description": "Virtual Augmentation is a remote talent agency: vetted remote developers, designers and support specialists who work as part of your team, on a simple monthly plan.",
+            "contactPoint": {
+              "@type": "ContactPoint",
+              "contactType": "sales",
+              "email": "%VITE_CONTACT_EMAIL%",
+              "availableLanguage": "English"
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "%VITE_SITE_URL%/#website",
+            "url": "%VITE_SITE_URL%/",
+            "name": "Virtual Augmentation",
+            "publisher": {
+              "@id": "%VITE_SITE_URL%/#organization"
+            },
+            "inLanguage": "en"
+          },
+          {
+            "@type": "AboutPage",
+            "@id": "%VITE_SITE_URL%/about#webpage",
+            "url": "%VITE_SITE_URL%/about",
+            "name": "About our staff augmentation agency | Virtual Augmentation",
+            "description": "Meet Virtual Augmentation, the staff augmentation agency that adds vetted remote developers, designers and support specialists to your team. See how we work.",
+            "isPartOf": {
+              "@id": "%VITE_SITE_URL%/#website"
+            },
+            "about": {
+              "@id": "%VITE_SITE_URL%/#organization"
+            },
+            "primaryImageOfPage": {
+              "@type": "ImageObject",
+              "url": "%VITE_SITE_URL%/og-image.jpg",
+              "width": 1200,
+              "height": 630
+            },
+            "inLanguage": "en",
+            "breadcrumb": {
+              "@id": "%VITE_SITE_URL%/about#breadcrumb"
+            }
+          },
+          {
+            "@type": "BreadcrumbList",
+            "@id": "%VITE_SITE_URL%/about#breadcrumb",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "%VITE_SITE_URL%/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "About",
+                "item": "%VITE_SITE_URL%/about"
+              }
+            ]
+          }
+        ]
+      }
+    </script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <div class="relative isolate overflow-x-clip">
+      <!-- @include src/partials/header.html -->
+      <main id="main">
+        <!-- @include src/partials/sections/about-hero.html -->
+        <!-- @include src/partials/sections/about-story.html -->
+        <!-- @include src/partials/sections/about-values.html -->
+        <!-- @include src/partials/sections/about-team.html -->
+        <!-- @include src/partials/sections/work-teaser.html -->
+      </main>
+    </div>
+    <!-- @include src/partials/footer.html -->
+  </body>
+</html>

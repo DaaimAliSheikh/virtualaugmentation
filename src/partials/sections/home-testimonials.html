@@ -1,0 +1,228 @@
+<!--
+  Client stories: two rows of quote cards that drift in opposite directions (30s per loop, linear).
+  Each row holds its track twice so the loop has no seam; the second copy is hidden from assistive tech.
+  The avatars are not lazy-loaded: inside a clipped, moving track a lazy image would only start
+  loading as it slides into view. They are about 8 KB each.
+  SAMPLE CONTENT: replace with real client testimonials before launch.
+-->
+<section id="testimonials" aria-labelledby="testimonials-title" class="page-padding section-space">
+  <div class="page-container overflow-hidden" data-reveal-group>
+    <div data-reveal="down" style="--reveal-delay:0ms" class="text-center space-below-lg">
+      <h2 id="testimonials-title" class="type-h2">Client stories from teams like yours.</h2>
+    </div>
+
+    <div class="relative flex flex-col gap-[1.7rem] sm:gap-7.5">
+      <!-- Row 1: drifts left. Its fourth card repeats the first, as a visual filler only. -->
+      <div class="flex">
+        <ul class="flex shrink-0 items-center gap-7.5 pr-7.5 animate-marquee [--marquee-duration:30s]">
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-7.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Priya S.<span class="sr-only">, Engineering Manager, SaaS startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">Our two developers joined stand-ups from day one. It feels like one team, not a vendor.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-6.webp" alt="" width="200" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Hannah L.<span class="sr-only">, Marketing Manager, home goods brand</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">They turned a rough brief into a website our whole team is proud of.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-5.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Marco D.<span class="sr-only">, Support Lead, online retailer</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">They answer tickets in our voice. Customers assume they sit in our office.</blockquote>
+            </figure>
+          </li>
+          <li aria-hidden="true" class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-7.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Priya S.<span class="sr-only">, Engineering Manager, SaaS startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">Our two developers joined stand-ups from day one. It feels like one team, not a vendor.</blockquote>
+            </figure>
+          </li>
+        </ul>
+        <ul aria-hidden="true" class="flex shrink-0 items-center gap-7.5 pr-7.5 animate-marquee [--marquee-duration:30s]">
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-7.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Priya S.<span class="sr-only">, Engineering Manager, SaaS startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">Our two developers joined stand-ups from day one. It feels like one team, not a vendor.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-6.webp" alt="" width="200" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Hannah L.<span class="sr-only">, Marketing Manager, home goods brand</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">They turned a rough brief into a website our whole team is proud of.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-5.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Marco D.<span class="sr-only">, Support Lead, online retailer</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">They answer tickets in our voice. Customers assume they sit in our office.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-7.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Priya S.<span class="sr-only">, Engineering Manager, SaaS startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">Our two developers joined stand-ups from day one. It feels like one team, not a vendor.</blockquote>
+            </figure>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Row 2: drifts right. -->
+      <div class="flex">
+        <ul class="flex shrink-0 items-center gap-7.5 pr-7.5 animate-marquee-reverse [--marquee-duration:30s]">
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-4.webp" alt="" width="200" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Daniel K.<span class="sr-only">, Operations Lead, logistics company</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">A clear monthly price and a weekly update. No surprises on the invoice.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-3.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Elena M.<span class="sr-only">, Brand Manager, consumer startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">Fast turnarounds, and every design file arrives on brand.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-2.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Omar H.<span class="sr-only">, Founder, fintech startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">We added capacity for a product launch without a single hire.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-1.webp" alt="" width="200" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Ben T.<span class="sr-only">, Director, digital agency</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">As an agency, we book them as white label capacity when projects stack up.</blockquote>
+            </figure>
+          </li>
+        </ul>
+        <ul aria-hidden="true" class="flex shrink-0 items-center gap-7.5 pr-7.5 animate-marquee-reverse [--marquee-duration:30s]">
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-4.webp" alt="" width="200" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Daniel K.<span class="sr-only">, Operations Lead, logistics company</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">A clear monthly price and a weekly update. No surprises on the invoice.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-3.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Elena M.<span class="sr-only">, Brand Manager, consumer startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">Fast turnarounds, and every design file arrives on brand.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-2.webp" alt="" width="201" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Omar H.<span class="sr-only">, Founder, fintech startup</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">We added capacity for a product launch without a single hire.</blockquote>
+            </figure>
+          </li>
+          <li class="flex shrink-0 items-start gap-3">
+            <div class="flex size-12 shrink-0 items-center justify-center rounded-full border border-white/20 bg-[#d9d9d9]/10 p-1 sm:size-15">
+              <img src="/src/assets/images/testimonial-1.webp" alt="" width="200" height="200" decoding="async" class="w-full">
+            </div>
+            <figure class="flex w-60 flex-col gap-3 rounded-card bg-surface p-4 shadow-surface sm:w-80 md:w-99">
+              <figcaption class="flex items-center justify-between">
+                <span class="type-h6">Ben T.<span class="sr-only">, Director, digital agency</span></span>
+                <img src="/src/assets/images/quote-mark-1.svg" alt="" width="28" height="21" loading="lazy" decoding="async" class="mt-0.75 shrink-0">
+              </figcaption>
+              <blockquote class="type-body">As an agency, we book them as white label capacity when projects stack up.</blockquote>
+            </figure>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Edge fades (hidden on phones, as in the reference). -->
+      <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 left-0 z-2 hidden w-20 bg-linear-to-r from-background to-background/0 sm:block lg:w-47.5"></div>
+      <div aria-hidden="true" class="pointer-events-none absolute inset-y-0 right-0 z-2 hidden w-20 bg-linear-to-l from-background to-background/0 sm:block lg:w-47.5"></div>
+    </div>
+  </div>
+</section>

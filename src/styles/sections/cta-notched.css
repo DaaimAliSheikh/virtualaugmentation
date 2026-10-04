@@ -1,0 +1,65 @@
+/*
+ * cta-notched: the call-to-action banner (#cta) and the notched cards (#why-us, #included).
+ *
+ * Layout, spacing and type are utilities in the partials. This file holds the two things
+ * utilities cannot express: artwork whose URL the bundler has to resolve, and the
+ * nine-slice surface of the notched card.
+ */
+@layer components {
+  /* ---------------------------------------------------------------- */
+  /* CTA banner artwork: orange arcs on a dot grid, 1200 x 304.        */
+  /* Size, position and repeat are utilities on the element.           */
+  /* ---------------------------------------------------------------- */
+  .cta-banner {
+    background-image: url("../../assets/images/cta-banner-1200.webp");
+    background-image: image-set(
+      url("../../assets/images/cta-banner-1200.webp") 1x,
+      url("../../assets/images/cta-banner-2400.webp") 2x
+    );
+  }
+
+  /* ---------------------------------------------------------------- */
+  /* Notched card                                                      */
+  /*                                                                   */
+  /* The surface is one image (feature-card-bg.webp, 386 x 182): a     */
+  /* raised panel with a round notch cut into its top edge, near the   */
+  /* right end. It is drawn as a nine-slice on ::before, so the panel  */
+  /* stretches with the card while the corners and the notch keep      */
+  /* their shape. Slices (image px): top 50 and right 126 hold the     */
+  /* notch, bottom 12 and left 12 hold the corners.                    */
+  /*                                                                   */
+  /*   below 768px   no surface: icon and text sit on the page         */
+  /*   768 - 991px   plain panel, slices at 1.5x; the notch slice is   */
+  /*                 pushed past the right edge and clipped            */
+  /*   992px and up  slices at 1x. The panel starts 29px down, 3px     */
+  /*                 above the centre of the 64px icon; the notch is   */
+  /*                 centred 71px from the panel's right edge, which   */
+  /*                 is where the icon sits (20px padding + 18px       */
+  /*                 margin + half its width). The 1px overhang trims  */
+  /*                 the image's soft outer pixel column on each side. */
+  /* ---------------------------------------------------------------- */
+  .notch-card {
+    position: relative;
+    isolation: isolate;
+    overflow: hidden;
+  }
+
+  @media (width >= 48rem) {
+    .notch-card::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      inset: 0 -11.8125rem 0 0;
+      border: solid transparent;
+      border-width: 4.6875rem 11.8125rem 1.125rem 1.125rem;
+      border-image: url("../../assets/images/feature-card-bg.webp") 50 126 12 12 fill;
+    }
+  }
+
+  @media (width >= 62rem) {
+    .notch-card::before {
+      inset: 1.8125rem -1px 0;
+      border-width: 3.125rem 7.875rem 0.75rem 0.75rem;
+    }
+  }
+}

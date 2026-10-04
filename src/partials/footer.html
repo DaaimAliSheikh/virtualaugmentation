@@ -1,0 +1,194 @@
+<footer class="border-t border-line bg-background pt-10 sm:pt-15 md:pt-20 lg:pt-30">
+  <div class="page-padding">
+    <div class="page-container">
+      <!-- "Let's talk" banner: email capture, handled by src/js/forms.js -->
+      <section
+        id="lets-talk"
+        aria-labelledby="lets-talk-title"
+        class="relative isolate flex flex-col gap-6 overflow-hidden rounded-card bg-surface px-5 py-6 shadow-surface space-below-lg sm:gap-[1.7rem] sm:bg-footer-arcs sm:bg-cover sm:bg-top sm:bg-no-repeat sm:px-6 sm:py-[1.6rem] md:gap-7.5 md:px-8 md:py-10 lg:flex-row lg:items-center lg:justify-between lg:gap-0 lg:bg-size-[auto_100%] lg:bg-bottom lg:px-15"
+      >
+        <div aria-hidden="true" class="absolute inset-0 bg-linear-to-b from-background/0 to-background/90"></div>
+
+        <div class="relative z-10 flex flex-col gap-4 lg:w-100">
+          <h2 id="lets-talk-title" class="type-h2">Let&rsquo;s talk</h2>
+          <p class="type-body">Tell us where your team needs a hand. Leave your email and we will reply within one business day.</p>
+        </div>
+
+        <div class="relative z-10 lg:w-103.25 lg:shrink-0">
+          <!-- From 480px up the button shares the field's grid cell and tucks into its right end. -->
+          <form
+            data-form
+            data-endpoint="%VITE_FORM_ENDPOINT%"
+            data-subject="New enquiry from virtualaugmentation.com"
+            action="mailto:%VITE_CONTACT_EMAIL%"
+            method="post"
+            enctype="text/plain"
+            class="relative grid gap-3.5 sm:w-[calc(100%+6px)] sm:max-w-105 sm:gap-0 lg:w-105 lg:max-w-none"
+          >
+            <label for="footer-email" class="sr-only">Work email</label>
+            <input
+              id="footer-email"
+              name="email"
+              type="email"
+              required
+              maxlength="256"
+              autocomplete="email"
+              placeholder="Enter your work email"
+              class="h-[3.2rem] w-full min-w-0 rounded-pill border border-line bg-surface px-4 text-regular/4 font-medium text-foreground placeholder:text-muted autofill:shadow-[inset_0_0_0_3.5rem_var(--color-surface)] aria-invalid:border-danger sm:col-start-1 sm:row-start-1 sm:h-14 sm:pr-37 sm:pl-7.5 lg:pr-40"
+            >
+            <p
+              id="footer-email-error"
+              hidden
+              class="-mt-1.5 px-4 text-small text-foreground sm:col-start-1 sm:row-start-2 sm:mt-2 sm:px-7.5 lg:absolute lg:inset-x-0 lg:top-full"
+            ></p>
+            <!-- The contact function needs a name and a message; this one-field form sends these defaults. -->
+            <input type="hidden" name="name" value="Website visitor">
+            <input type="hidden" name="message" value="Please get in touch with me about adding specialists to my team. (Sent from the Let's talk form.)">
+            <input type="text" name="website" tabindex="-1" autocomplete="off" class="hidden" aria-hidden="true">
+            <button
+              type="submit"
+              data-form-submit
+              class="btn btn-plain disabled:cursor-default sm:col-start-1 sm:row-start-1 sm:mr-1.5 sm:self-center sm:justify-self-end lg:mr-1.75"
+            >
+              Get in touch
+            </button>
+          </form>
+          <div data-form-success hidden role="status" tabindex="-1" class="rounded-xl bg-success p-5 text-center text-elevated">
+            Thank you. We will be in touch within one business day.
+          </div>
+          <div data-form-error hidden role="alert" tabindex="-1" class="mt-5 rounded-[1.25rem] bg-danger p-5 text-center text-white">
+            Something went wrong. Please email us at
+            <a href="mailto:%VITE_CONTACT_EMAIL%" class="wrap-anywhere underline underline-offset-4">%VITE_CONTACT_EMAIL%</a>.
+          </div>
+        </div>
+      </section>
+
+      <!-- Brand + link columns. Columns hug their links and share the leftover width as gaps. -->
+      <div
+        class="grid grid-cols-[auto_auto] justify-between gap-6 space-below-lg sm:grid-cols-[repeat(3,auto)] sm:gap-x-8 sm:gap-y-[1.8rem] md:grid-cols-[repeat(4,auto)] md:gap-y-8 lg:grid-cols-[minmax(0,22rem)_repeat(4,auto)] lg:gap-x-10"
+      >
+        <div class="col-span-2 flex flex-col items-start gap-6 contain-inline-size sm:col-span-3 md:col-span-4 lg:col-span-1">
+          <a href="/" aria-label="Virtual Augmentation, home" class="inline-block max-w-full">
+            <img src="/src/assets/images/logo.svg" alt="Virtual Augmentation" width="184" height="44" loading="lazy" decoding="async">
+          </a>
+          <p class="type-small">Vetted remote developers, designers and support specialists who work as part of your team, on a simple monthly plan.</p>
+        </div>
+
+        <nav aria-label="Footer" class="contents">
+          <div class="flex flex-col items-start gap-[1.2rem] sm:gap-7.5">
+            <p id="footer-company" class="type-small text-subtle">Company</p>
+            <ul aria-labelledby="footer-company" class="flex flex-col items-start gap-6">
+              <li><a href="/" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Home</a></li>
+              <li><a href="/about" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">About</a></li>
+              <li><a href="/portfolio" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Portfolio</a></li>
+              <li><a href="/pricing" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Pricing</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col items-start gap-[1.2rem] justify-self-end sm:gap-7.5 sm:justify-self-auto">
+            <p id="footer-services" class="type-small text-subtle">Services</p>
+            <ul aria-labelledby="footer-services" class="flex flex-col items-start gap-6">
+              <li><a href="/services#web-development" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Web Development</a></li>
+              <li><a href="/services#web-design" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Web Design</a></li>
+              <li><a href="/services#customer-service" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Customer Service</a></li>
+              <li><a href="/services#graphic-design" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Graphic Design</a></li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col items-start gap-[1.2rem] sm:gap-7.5 sm:justify-self-end md:justify-self-auto">
+            <p id="footer-resources" class="type-small text-subtle">Resources</p>
+            <ul aria-labelledby="footer-resources" class="flex flex-col items-start gap-6">
+              <li><a href="/#process" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">How we work</a></li>
+              <li><a href="/#testimonials" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Client stories</a></li>
+              <li><a href="/pricing#faq" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">FAQ</a></li>
+            </ul>
+          </div>
+
+          <!-- The email address is wider than a phone or tablet column, so this group takes a full row below 768px. -->
+          <div class="col-span-2 flex flex-col items-start gap-[1.2rem] sm:col-span-3 sm:gap-7.5 md:col-span-1 md:justify-self-end lg:justify-self-auto">
+            <p id="footer-contact" class="type-small text-subtle">Contact</p>
+            <ul aria-labelledby="footer-contact" class="flex flex-col items-start gap-6">
+              <li><a href="/contact" class="relative block text-regular/4 font-medium text-body after:absolute after:inset-x-0 after:-inset-y-3">Get a quote</a></li>
+              <li><a href="mailto:%VITE_CONTACT_EMAIL%" class="relative block text-regular/4 font-medium wrap-anywhere text-body after:absolute after:inset-x-0 after:-inset-y-3">%VITE_CONTACT_EMAIL%</a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-surface px-5 py-4 md:px-6">
+    <div class="mx-auto flex max-w-300 flex-col gap-4 md:flex-row md:items-center md:justify-between">
+      <ul aria-label="Social media" class="flex items-center gap-2.5">
+        <li>
+          <a
+            href="%VITE_SOCIAL_INSTAGRAM%"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Virtual Augmentation on Instagram"
+            class="group relative flex size-12.5 items-center justify-center rounded-full bg-surface shadow-[inset_0_-0.75px_0.75px_#00000040,inset_0_0.75px_0.75px_#ffffff1f,inset_0_1px_1.25px_#00000040]"
+          >
+            <span class="flex size-10 items-center justify-center rounded-full bg-background">
+              <img src="/src/assets/images/instagram-icon.svg" alt="" width="20" height="20" loading="lazy" decoding="async">
+            </span>
+            <span class="absolute flex size-10 items-center justify-center rounded-full bg-background opacity-0 transition-opacity duration-400 ease-standard group-hover:opacity-100 group-focus-visible:opacity-100">
+              <img src="/src/assets/images/instagram.svg" alt="" width="22" height="22" loading="lazy" decoding="async">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="%VITE_SOCIAL_X%"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Virtual Augmentation on X"
+            class="group relative flex size-12.5 items-center justify-center rounded-full bg-surface shadow-[inset_0_-0.75px_0.75px_#00000040,inset_0_0.75px_0.75px_#ffffff1f,inset_0_1px_1.25px_#00000040]"
+          >
+            <span class="flex size-10 items-center justify-center rounded-full bg-background">
+              <img src="/src/assets/images/twitter-icon.svg" alt="" width="20" height="18" loading="lazy" decoding="async">
+            </span>
+            <span class="absolute flex size-10 items-center justify-center rounded-full bg-background opacity-0 transition-opacity duration-400 ease-standard group-hover:opacity-100 group-focus-visible:opacity-100">
+              <img src="/src/assets/images/twitter.svg" alt="" width="20" height="18" loading="lazy" decoding="async">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="%VITE_SOCIAL_LINKEDIN%"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Virtual Augmentation on LinkedIn"
+            class="group relative flex size-12.5 items-center justify-center rounded-full bg-surface shadow-[inset_0_-0.75px_0.75px_#00000040,inset_0_0.75px_0.75px_#ffffff1f,inset_0_1px_1.25px_#00000040]"
+          >
+            <span class="flex size-10 items-center justify-center rounded-full bg-background">
+              <img src="/src/assets/images/linkedin-icon.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+            </span>
+            <span class="absolute flex size-10 items-center justify-center rounded-full bg-background opacity-0 transition-opacity duration-400 ease-standard group-hover:opacity-100 group-focus-visible:opacity-100">
+              <img src="/src/assets/images/linkedin.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+            </span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="%VITE_SOCIAL_FACEBOOK%"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Virtual Augmentation on Facebook"
+            class="group relative flex size-12.5 items-center justify-center rounded-full bg-surface shadow-[inset_0_-0.75px_0.75px_#00000040,inset_0_0.75px_0.75px_#ffffff1f,inset_0_1px_1.25px_#00000040]"
+          >
+            <span class="flex size-10 items-center justify-center rounded-full bg-background">
+              <img src="/src/assets/images/facebook-icon.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+            </span>
+            <span class="absolute flex size-10 items-center justify-center rounded-full bg-background opacity-0 transition-opacity duration-400 ease-standard group-hover:opacity-100 group-focus-visible:opacity-100">
+              <img src="/src/assets/images/facebook.svg" alt="" width="24" height="24" loading="lazy" decoding="async">
+            </span>
+          </a>
+        </li>
+      </ul>
+      <p class="type-body">
+        &copy; {{year}}
+        <a href="/" class="text-gradient-brand">Virtual Augmentation</a>. All rights reserved.
+      </p>
+    </div>
+  </div>
+</footer>

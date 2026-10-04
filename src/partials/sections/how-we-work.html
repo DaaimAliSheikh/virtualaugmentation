@@ -1,0 +1,72 @@
+<!--
+  How we work: three cards, each a framed UI illustration with a title and a line of text.
+  Used unchanged on Home and Services. The orange glow under each illustration is always on
+  below 992px and fades in on hover from 992px up. In the two-column layout (768 to 991px) the
+  wells stretch so the titles of a row line up.
+-->
+<section id="how-we-work" aria-labelledby="how-we-work-title" class="page-padding section-space">
+  <div class="page-container" data-reveal-group>
+    <div data-reveal="down" class="mx-auto text-center space-below-lg lg:w-157.5">
+      <h2 id="how-we-work-title" class="type-h2 text-balance">See every task, every update and every hour</h2>
+    </div>
+
+    <ul class="grid gap-[1.8rem] sm:gap-8 md:grid-cols-2 md:gap-x-[1.7rem] md:gap-y-10 lg:grid-cols-3 lg:gap-6">
+      <li data-reveal="up" style="--reveal-delay:400ms" class="group flex flex-col gap-4 sm:gap-5">
+        <div class="relative flex w-full flex-col items-center justify-end overflow-hidden rounded-card bg-surface/90 pt-[2.3rem] shadow-surface sm:pt-12.5 md:max-lg:flex-1 lg:h-91 lg:pt-0">
+          <img
+            src="/src/assets/images/feature-ui-1.webp"
+            alt="Task panel with 100 running tasks and a ring at 35 percent complete"
+            width="276"
+            height="313"
+            loading="lazy"
+            decoding="async"
+            class="relative z-1"
+          >
+          <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-24.5 bg-gradient-brand blur-[100px] transition-opacity duration-500 ease-linear lg:opacity-0 lg:group-hover:opacity-100"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Tasks on a shared board</h3>
+          <p class="type-body">Every request becomes a task with an owner, a status and a due date.</p>
+        </div>
+      </li>
+
+      <li data-reveal="up" style="--reveal-delay:400ms" class="group flex flex-col gap-4 sm:gap-5">
+        <div class="relative flex w-full flex-col items-center justify-end overflow-hidden rounded-card bg-surface/90 pt-[2.3rem] shadow-surface sm:pt-12.5 md:max-lg:flex-1 lg:h-91 lg:pt-0">
+          <img
+            src="/src/assets/images/feature-ui-2.webp"
+            alt="List of workstreams with progress rings at 52 and 85 percent"
+            width="341"
+            height="309"
+            loading="lazy"
+            decoding="async"
+            class="relative z-1"
+          >
+          <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-24.5 bg-gradient-brand blur-[100px] transition-opacity duration-500 ease-linear lg:opacity-0 lg:group-hover:opacity-100"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Progress at a glance</h3>
+          <p class="type-body">See where each workstream stands at any time, without waiting for a status call.</p>
+        </div>
+      </li>
+
+      <li data-reveal="up" style="--reveal-delay:400ms" class="group flex flex-col gap-4 sm:gap-5">
+        <div class="relative flex w-full flex-col items-center justify-end overflow-hidden rounded-card bg-surface/90 pt-[2.3rem] shadow-surface sm:pt-12.5 md:max-lg:flex-1 lg:h-91 lg:pt-0">
+          <img
+            src="/src/assets/images/feature-ui-3.webp"
+            alt="Team progress panel at 90 percent with one hour logged"
+            width="316"
+            height="314"
+            loading="lazy"
+            decoding="async"
+            class="relative z-1"
+          >
+          <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-24.5 bg-gradient-brand blur-[100px] transition-opacity duration-500 ease-linear lg:opacity-0 lg:group-hover:opacity-100"></div>
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="type-h6">Hours fully logged</h3>
+          <p class="type-body">Time is tracked per task, so you always know where your hours went.</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+</section>

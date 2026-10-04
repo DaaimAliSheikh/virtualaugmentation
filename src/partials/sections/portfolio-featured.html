@@ -1,0 +1,36 @@
+<!-- Portfolio intro + featured project (first section of /portfolio). The card is not a link: there are no project detail pages. -->
+<section id="featured" aria-labelledby="featured-title" class="page-padding pt-10 pb-7.5 sm:pt-15 md:pt-20 md:pb-10 lg:pt-25 lg:pb-15">
+  <div class="page-container">
+    <div class="mx-auto lg:max-w-259" data-reveal-group>
+      <div data-reveal="down" class="mx-auto flex flex-col gap-5 text-center space-below-lg lg:w-[30.125rem]">
+        <h1 id="featured-title" class="type-h2">Our portfolio</h1>
+        <p class="type-body">Our web design portfolio, plus web development, customer service and graphic design work by our remote teams.</p>
+      </div>
+
+      <div data-reveal="up" style="--reveal-delay:400ms">
+        <article
+          aria-labelledby="featured-project-title"
+          class="group flex flex-col gap-[1.6rem] rounded-card bg-surface px-4 py-5 shadow-surface sm:gap-7.5 sm:px-5 md:gap-9 lg:flex-row lg:items-center lg:gap-12.5"
+        >
+          <div class="overflow-hidden rounded-card lg:h-82.5 lg:w-127">
+            <img
+              src="/src/assets/images/work-featured-1200.webp"
+              srcset="/src/assets/images/work-featured-480.webp 480w, /src/assets/images/work-featured-800.webp 800w, /src/assets/images/work-featured-1200.webp 1200w, /src/assets/images/work-featured-1600.webp 1600w, /src/assets/images/work-featured-1952.webp 1952w"
+              sizes="(min-width: 992px) 508px, 90vw"
+              width="1200"
+              height="811"
+              alt="Nested neon teal triangles, cover art for the featured online store project"
+              fetchpriority="high"
+              decoding="async"
+              class="size-full object-cover transition-transform duration-1000 ease-standard lg:group-hover:scale-110"
+            >
+          </div>
+          <div class="flex flex-col gap-6 lg:min-w-0 lg:flex-1">
+            <h2 id="featured-project-title" class="type-h3">A full remote team for an online store</h2>
+            <p class="type-body lg:max-w-[23.125rem]">Developers, a designer and support specialists, working as one team.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

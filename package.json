@@ -1,0 +1,22 @@
+{
+  "name": "virtualaugmentation",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Marketing site for Virtual Augmentation (virtualaugmentation.com). Static multi-page site built with Vite, vanilla JS and Tailwind CSS v4, plus a Vercel serverless function for the contact form.",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "nodemailer": "^10.0.14"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.2"
+  },
+  "engines": {
+    "node": ">=22.12.0"
+  }
+}

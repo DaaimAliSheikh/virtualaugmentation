@@ -1,0 +1,35 @@
+/* services-cards: styles that Tailwind utilities cannot express. Prefix every class with the section name. Keep this file small. */
+@layer components {
+  /* The hairline behind each icon row carries a short orange streak that sweeps across and back. */
+  .services-cards-line {
+    animation: services-cards-line 10s linear infinite alternate;
+  }
+
+  @keyframes services-cards-line {
+    to {
+      transform: translateX(var(--services-cards-line-x, -572px));
+    }
+  }
+
+  /*
+   * Home only (.services-cards-glow-on-hover on the section): from 992px up the glow at the
+   * foot of a card stays off until the card is hovered or its link has keyboard focus.
+   * Below 992px, and on the Services page, the glow is always on. The 1s fade itself is a
+   * utility on the element, so it also applies when the viewport crosses 992px.
+   */
+  @media (width >= 62rem) {
+    .services-cards-glow-on-hover .services-cards-light {
+      opacity: 0;
+    }
+
+    .services-cards-glow-on-hover .services-cards-card:has(:focus-visible) .services-cards-light {
+      opacity: 1;
+    }
+
+    @media (hover: hover) {
+      .services-cards-glow-on-hover .services-cards-card:hover .services-cards-light {
+        opacity: 1;
+      }
+    }
+  }
+}

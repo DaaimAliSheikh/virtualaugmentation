@@ -1,0 +1,36 @@
+/*
+ * Virtual Augmentation design system (Tailwind CSS v4, CSS-first configuration).
+ *
+ *   theme.css       design tokens (@theme): colors, type, radii, shadows, motion, breakpoints
+ *   fonts.css       self-hosted Be Vietnam Pro
+ *   base.css        element defaults
+ *   components.css  shared primitives as @utility classes (type-*, btn, page-*, reveal, marquee)
+ *   header.css      site header / navigation
+ *   footer.css      site footer
+ *   sections/*.css  section-specific styles that utilities cannot express (one file per section group)
+ *
+ * Class detection is explicit (source(none) + @source) so that markdown and tooling
+ * files in the repository can never leak unused utilities into the production CSS.
+ */
+@import "tailwindcss" source(none);
+
+@import "./fonts.css";
+@import "./theme.css";
+@import "./base.css";
+@import "./components.css";
+@import "./header.css";
+@import "./footer.css";
+@import "./sections/hero.css";
+@import "./sections/platforms-process.css";
+@import "./sections/services-cards.css";
+@import "./sections/testimonials-how.css";
+@import "./sections/cta-notched.css";
+@import "./sections/plans.css";
+@import "./sections/work.css";
+@import "./sections/about.css";
+@import "./sections/story-values.css";
+@import "./sections/contact-404.css";
+
+@source "../../*.html";
+@source "../partials";
+@source "../js";

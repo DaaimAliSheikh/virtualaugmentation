@@ -1,0 +1,35 @@
+/* platforms-process: styles that Tailwind utilities cannot express. Prefix every class with the section name. Keep this file small. */
+
+@layer components {
+  /*
+   * Process step card. The notched silhouette (the scoop that holds the round icon) is a
+   * bitmap, anchored to the bottom edge. It is painted on a pseudo-layer so the glow element
+   * can sit behind it: the card is its own stacking context (isolate), glow at -10, shape at -1.
+   * Below 62rem the shape scales with the card (contain); from 80rem it is shown at its
+   * intrinsic 284x190 size, exactly as the reference does. Between the two the four columns
+   * are narrower than the bitmap (the reference lets the grid overflow there), so the shape is
+   * stretched to the card instead: full width, and everything below the icon (60px - 1px overlap).
+   */
+  .process-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    background-image: url("../../assets/images/work-card-bg.webp");
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  @media (width >= 62rem) {
+    .process-card::before {
+      background-size: 100% calc(100% - 3.6875rem);
+    }
+  }
+
+  @media (width >= 80rem) {
+    .process-card::before {
+      background-size: auto;
+    }
+  }
+}

@@ -1,0 +1,64 @@
+<section id="hero" aria-labelledby="hero-title" class="relative pt-10 pb-7.5 sm:pt-15 md:pt-20 md:pb-10 lg:pt-25 lg:pb-0">
+  <!-- Backdrop: starts at the top of the page, so it also sits behind the transparent header. -->
+  <div aria-hidden="true" class="hero-backdrop absolute inset-x-0 bottom-0 -top-(--header-height) -z-10 bg-background bg-cover bg-position-[50%_0] bg-no-repeat"></div>
+
+  <!-- Spark fields (decorative, animated in src/styles/sections/hero.css). None below 480px, three up to 767px, five above. -->
+  <div aria-hidden="true" class="hero-dots top-67.25 left-120 hidden sm:block">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div aria-hidden="true" class="hero-dots top-159.75 left-94.75 hidden md:block">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div aria-hidden="true" class="hero-dots top-73.25 right-135 hidden sm:block">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div aria-hidden="true" class="hero-dots top-122.5 right-119 hidden sm:block">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+  <div aria-hidden="true" class="hero-dots top-178.25 right-79.5 hidden md:block">
+    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="page-padding">
+    <div class="page-container" data-reveal-group>
+      <div class="mx-auto flex flex-col gap-10 lg:w-213 lg:gap-20">
+        <div data-reveal="down" class="flex flex-col items-center gap-7.5 text-center">
+          <div class="flex flex-col items-center gap-5">
+            <h1 id="hero-title" class="type-h1">Staff augmentation without hiring.</h1>
+            <p class="type-body lg:w-153.5">Add vetted remote developers, designers and support specialists to your team on a monthly plan. No recruiting, no payroll.</p>
+          </div>
+          <div class="flex items-center justify-center gap-3">
+            <a class="btn btn-secondary" href="/services">Our Services</a>
+            <a class="btn" href="/pricing" aria-label="Get started: see plans and pricing">Get Started</a>
+          </div>
+        </div>
+
+        <!-- Product shot (the LCP image). The frosted panel blurs the arcs that pass behind it. -->
+        <div data-reveal="up" style="--reveal-delay:400ms" class="relative z-3 backdrop-blur-[30px]">
+          <img
+            src="/src/assets/images/dashboard-852.webp"
+            srcset="/src/assets/images/dashboard-480.webp 480w, /src/assets/images/dashboard-852.webp 852w, /src/assets/images/dashboard-1704.webp 1704w"
+            sizes="(min-width: 992px) 852px, (min-width: 768px) min(852px, calc(100vw - 3.75rem)), (min-width: 480px) calc(100vw - 3rem), calc(100vw - 2rem)"
+            width="852"
+            height="560"
+            alt="Dashboard mockup with sales charts, user metrics and a project table, the kind of web app our remote teams design and build"
+            fetchpriority="high"
+            decoding="async"
+            class="mx-auto"
+          >
+        </div>
+      </div>
+
+      <!-- Fades the foot of the product shot and the arcs into the canvas. -->
+      <div aria-hidden="true" class="absolute inset-x-0 bottom-0 z-10 h-16 bg-linear-to-b from-background/0 via-background/0 via-25% to-background to-46% sm:h-20 md:h-36.25"></div>
+
+      <!-- Arcs rising behind the product shot (desktop only), centred 286px above the foot of the section. -->
+      <div aria-hidden="true" class="relative -top-71.5 z-2 hidden h-0 items-center justify-center [--reveal-duration:1000ms] [--reveal-ease:linear] lg:flex">
+        <img data-reveal="fade" style="--reveal-delay:800ms" src="/src/assets/images/hero-arc-1.svg" width="1211" height="649" alt="" loading="lazy" decoding="async" class="absolute max-w-full">
+        <img data-reveal="fade" style="--reveal-delay:600ms" src="/src/assets/images/hero-arc-2.svg" width="1165" height="568" alt="" loading="lazy" decoding="async" class="absolute z-2 max-w-full">
+        <img data-reveal="fade" style="--reveal-delay:400ms" src="/src/assets/images/hero-arc-4.svg" width="1146" height="568" alt="" loading="lazy" decoding="async" class="absolute z-1 max-w-full">
+        <img data-reveal="fade" style="--reveal-delay:200ms" src="/src/assets/images/hero-arc-3.svg" width="1088" height="546" alt="" loading="lazy" decoding="async" class="absolute max-w-full">
+      </div>
+    </div>
+  </div>
+</section>

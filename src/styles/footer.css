@@ -1,0 +1,10 @@
+/* footer: styles that Tailwind utilities cannot express. Keep this file small. */
+
+/*
+ * Orange arcs behind the "Let's talk" banner. The asset URL has to be resolved by the
+ * bundler, so it lives here; registering it as a utility lets the markup pick the
+ * breakpoint (sm:bg-footer-arcs), which keeps phones from ever downloading the image.
+ */
+@utility bg-footer-arcs {
+  background-image: url("../assets/images/footer-cta-bg.webp");
+}

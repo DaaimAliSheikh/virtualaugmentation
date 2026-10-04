@@ -1,0 +1,64 @@
+/*
+ * hero: what utilities cannot express.
+ *   .hero-backdrop   the textured backdrop image (it runs up behind the transparent header)
+ *   .hero-dots       a 256 x 336 field of 17 sparks that grow one after another (100ms apart, 1s each),
+ *                    hold, then all shrink together: a 3.6s loop. Decorative; with reduced motion the
+ *                    sparks simply stay visible.
+ */
+@layer components {
+  .hero-backdrop {
+    background-image: url("../../assets/images/hero-bg.webp");
+  }
+
+  .hero-dots {
+    position: absolute;
+    width: 16rem;
+    height: 21rem;
+  }
+
+  .hero-dots > span {
+    position: absolute;
+    width: 0.1875rem;
+    height: 0.1875rem;
+    border-radius: 100%;
+    background-image: linear-gradient(180deg, var(--color-primary), var(--color-accent));
+    animation: 3600ms linear infinite;
+  }
+
+  .hero-dots > :nth-child(1) { top: 40px; left: 10px; animation-name: hero-dot-1; }
+  .hero-dots > :nth-child(2) { top: 30px; left: 100px; animation-name: hero-dot-2; }
+  .hero-dots > :nth-child(3) { top: 0; left: 250px; animation-name: hero-dot-3; }
+  .hero-dots > :nth-child(4) { top: 121px; left: 15px; animation-name: hero-dot-4; }
+  .hero-dots > :nth-child(5) { top: 95px; left: 112px; animation-name: hero-dot-5; }
+  .hero-dots > :nth-child(6) { top: 70px; left: 75px; animation-name: hero-dot-6; }
+  .hero-dots > :nth-child(7) { top: 141px; left: 78px; animation-name: hero-dot-7; }
+  .hero-dots > :nth-child(8) { top: 226px; left: 0; animation-name: hero-dot-8; }
+  .hero-dots > :nth-child(9) { top: 95px; left: 49px; animation-name: hero-dot-9; }
+  .hero-dots > :nth-child(10) { top: 196px; left: 90px; animation-name: hero-dot-10; }
+  .hero-dots > :nth-child(11) { top: 224px; left: 136px; animation-name: hero-dot-11; }
+  .hero-dots > :nth-child(12) { top: 123px; left: 105px; animation-name: hero-dot-12; }
+  .hero-dots > :nth-child(13) { top: 173px; left: 154px; animation-name: hero-dot-13; }
+  .hero-dots > :nth-child(14) { top: 118px; left: 167px; animation-name: hero-dot-14; }
+  .hero-dots > :nth-child(15) { top: 66px; left: 151px; animation-name: hero-dot-15; }
+  .hero-dots > :nth-child(16) { top: 144px; left: 233px; animation-name: hero-dot-16; }
+  .hero-dots > :nth-child(17) { top: 38px; left: 235px; animation-name: hero-dot-17; }
+
+  /* Spark n starts growing at (n - 1) x 100ms, is full 1000ms later, and shrinks from 2600ms to 3600ms. */
+  @keyframes hero-dot-1 { 0% { scale: 0; } 27.778%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-2 { 0%, 2.778% { scale: 0; } 30.556%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-3 { 0%, 5.556% { scale: 0; } 33.333%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-4 { 0%, 8.333% { scale: 0; } 36.111%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-5 { 0%, 11.111% { scale: 0; } 38.889%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-6 { 0%, 13.889% { scale: 0; } 41.667%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-7 { 0%, 16.667% { scale: 0; } 44.444%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-8 { 0%, 19.444% { scale: 0; } 47.222%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-9 { 0%, 22.222% { scale: 0; } 50%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-10 { 0%, 25% { scale: 0; } 52.778%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-11 { 0%, 27.778% { scale: 0; } 55.556%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-12 { 0%, 30.556% { scale: 0; } 58.333%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-13 { 0%, 33.333% { scale: 0; } 61.111%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-14 { 0%, 36.111% { scale: 0; } 63.889%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-15 { 0%, 38.889% { scale: 0; } 66.667%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-16 { 0%, 41.667% { scale: 0; } 69.444%, 72.222% { scale: 1; } 100% { scale: 0; } }
+  @keyframes hero-dot-17 { 0%, 44.444% { scale: 0; } 72.222% { scale: 1; } 100% { scale: 0; } }
+}

@@ -1,0 +1,46 @@
+<section id="about" aria-labelledby="about-title" class="page-padding pt-10 pb-7.5 sm:pt-15 md:pt-20 md:pb-10 lg:pt-25 lg:pb-15">
+  <div class="page-container">
+    <div class="relative flex flex-col gap-8 sm:gap-9 md:gap-10 lg:gap-22.5" data-reveal-group>
+      <div data-reveal="right" class="flex flex-col items-start gap-6 sm:gap-[1.7rem] md:gap-7.5 lg:w-[57.5%]">
+        <div class="flex flex-col gap-4 md:gap-5">
+          <h1 id="about-title" class="type-h2">Staff augmentation agency for growing teams.</h1>
+          <p class="type-body">Virtual Augmentation is a remote talent agency that adds vetted developers, designers and support specialists to busy teams.</p>
+        </div>
+        <a class="btn" href="/contact">Get a Quote</a>
+      </div>
+
+      <!-- Wide photo: full column width; from 992px a fixed-height band whose top-right corner is cut out by the portrait block. -->
+      <div data-reveal="up" style="--reveal-delay:500ms" class="overflow-hidden rounded-card lg:h-118.75">
+        <img
+          src="/src/assets/images/about-hero-2-1200.webp"
+          srcset="/src/assets/images/about-hero-2-480.webp 480w, /src/assets/images/about-hero-2-800.webp 800w, /src/assets/images/about-hero-2-1200.webp 1200w"
+          sizes="(min-width: 78rem) 1200px, calc(100vw - 3rem)"
+          alt="Colleagues sharing a high five across their desks in front of a wall-size world map"
+          width="1200"
+          height="475"
+          fetchpriority="high"
+          decoding="async"
+          class="h-auto w-full rounded-card lg:h-full lg:object-cover"
+        >
+      </div>
+
+      <!-- Portrait photo: desktop only. Its canvas-coloured frame overlaps the wide photo and forms the cut-out corner. -->
+      <div
+        data-reveal="up"
+        style="--reveal-delay:500ms"
+        class="absolute top-0 right-0 hidden overflow-hidden rounded-card rounded-br-none bg-background pb-7.5 pl-7.5 lg:block lg:h-122.25 lg:w-[43%]"
+      >
+        <img
+          src="/src/assets/images/about-hero-1-972.webp"
+          srcset="/src/assets/images/about-hero-1-480.webp 480w, /src/assets/images/about-hero-1-800.webp 800w, /src/assets/images/about-hero-1-972.webp 972w"
+          sizes="(min-width: 78rem) 486px, (min-width: 62rem) 40vw, 1px"
+          alt="Team reviewing printed charts and a tablet around a meeting table"
+          width="972"
+          height="918"
+          decoding="async"
+          class="size-full rounded-card object-cover"
+        >
+      </div>
+    </div>
+  </div>
+</section>

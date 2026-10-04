@@ -1,0 +1,13 @@
+/* contact-404: styles that Tailwind utilities cannot express. Prefix every class with the section name. Keep this file small. */
+
+@layer components {
+  /*
+   * The success block of the contact form holds two sentences. Without a form endpoint
+   * (data-endpoint=""), forms.js hands the message to the visitor's mail app, so the
+   * block says "send it" instead of "thank you".
+   */
+  .contact-form[data-endpoint=""] ~ [data-form-success] .contact-sent-direct,
+  .contact-form:not([data-endpoint=""]) ~ [data-form-success] .contact-sent-mail {
+    display: none;
+  }
+}

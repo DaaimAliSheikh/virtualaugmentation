@@ -1,0 +1,33 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#090910">
+<meta name="color-scheme" content="dark">
+<meta name="format-detection" content="telephone=no">
+
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+
+<link rel="preload" href="/src/assets/fonts/be-vietnam-pro-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/src/assets/fonts/be-vietnam-pro-latin-500.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/src/assets/fonts/be-vietnam-pro-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+
+<meta property="og:site_name" content="Virtual Augmentation">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Marks scripting as available before first paint so scroll-reveal start states never flash.
+     If the main bundle has not reported in after 4s, the mark is removed and everything shows. -->
+<script>
+  (function (root) {
+    root.classList.add('js');
+    setTimeout(function () {
+      if (!window.__siteReady) root.classList.remove('js');
+    }, 4000);
+  })(document.documentElement);
+</script>
+
+<link rel="stylesheet" href="/src/styles/main.css">
+<script type="module" src="/src/main.js"></script>
